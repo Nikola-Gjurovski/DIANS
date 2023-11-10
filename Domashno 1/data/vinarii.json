@@ -1,0 +1,547 @@
+[
+  {
+    "id": "5167052721",
+    "visible": "true",
+    "version": "2",
+    "changeset": "92342375",
+    "timestamp": "2020-10-12T09:33:56Z",
+    "user": "fuck you OSM",
+    "uid": "9545352",
+    "lat": "41.7777740",
+    "lon": "21.7409905",
+    "tags": {
+      "addr:city": "Veles",
+      "craft": "winery",
+      "name": "Chateau Sopot",
+      "name:mk": "\u0428\u0430\u0442\u043e \u0421\u043e\u043f\u043e\u0442",
+      "opening_hours": "Mo-Su 09:00-22:00",
+      "phone": "+389 78 663 300"
+    }
+  },
+  {
+    "id": "6815931485",
+    "visible": "true",
+    "version": "1",
+    "changeset": "74777891",
+    "timestamp": "2019-09-22T17:52:47Z",
+    "user": "YunDi88",
+    "uid": "9047835",
+    "lat": "42.0000999",
+    "lon": "21.4209535",
+    "tags": {
+      "amenity": "pub",
+      "name": "Stobi Winery"
+    }
+  },
+  {
+    "id": "5901752487",
+    "visible": "true",
+    "version": "1",
+    "changeset": "62519365",
+    "timestamp": "2018-09-12T12:36:43Z",
+    "user": "KorBorNor",
+    "uid": "6066920",
+    "lat": "42.0001818",
+    "lon": "21.4358622",
+    "tags": {
+      "amenity": "pub",
+      "name:en": "Winery Temov"
+    }
+  },
+  {
+    "id": "5667327121",
+    "visible": "true",
+    "version": "1",
+    "changeset": "59575728",
+    "timestamp": "2018-06-05T17:14:24Z",
+    "user": "pande kitanov",
+    "uid": "8377443",
+    "lat": "41.4943704",
+    "lon": "22.0915153",
+    "tags": {
+      "addr:postcode": "1440",
+      "addr:street": "\u0418\u043d\u0434\u0443\u0441\u0442\u0440\u0438\u0441\u043a\u0430",
+      "email": "bovin@t.mk",
+      "name": "\u0411\u043e\u0432\u0438\u043d \u0432\u0438\u043d\u0430\u0440\u0438\u0458\u0430",
+      "name:en": "Bovin Winery",
+      "name:hr": "Bovin vinarija",
+      "name:ru": "\u0411\u043e\u0432\u0438\u043d",
+      "opening_hours": "Mo-Fr 08:00-16:00",
+      "phone": "043365322",
+      "shop": "wine",
+      "website": "http://www.bovin.com.mk"
+    }
+  },
+  {
+    "id": "9870303417",
+    "visible": "true",
+    "version": "2",
+    "changeset": "123277057",
+    "timestamp": "2022-07-06T12:48:49Z",
+    "user": "MightyMXC",
+    "uid": "9646870",
+    "lat": "41.1848848",
+    "lon": "20.8771330",
+    "tags": {
+      "email": "info@monasterywinery.com",
+      "name:en": "monastery winery",
+      "opening_hours": "Mo-Su 08:00-23:00",
+      "phone": "+389 78474656",
+      "shop": "wine",
+      "website": "https://monasterywinery.com"
+    }
+  },
+  {
+    "id": "533757101",
+    "visible": "true",
+    "version": "3",
+    "changeset": "143284589",
+    "timestamp": "2023-10-28T21:24:14Z",
+    "user": "b-jazz-bot",
+    "uid": "9451067",
+    "nodes": [
+      "5177854589",
+      "6644606350",
+      "5177854590",
+      "5177854591",
+      "5177854592",
+      "5177854589"
+    ],
+    "tags": {
+      "craft": "winery",
+      "name": "Vinarija Stobi",
+      "website": "https://www.stobiwinery.mk/"
+    }
+  },
+  {
+    "id": "370311640",
+    "visible": "true",
+    "version": "1",
+    "changeset": "33980657",
+    "timestamp": "2015-09-12T13:34:43Z",
+    "user": "PantherStrix",
+    "uid": "1468248",
+    "nodes": [
+      "3740200042",
+      "3740200039",
+      "3740203943",
+      "3740200043",
+      "3740200042"
+    ],
+    "tags": {
+      "building": "yes",
+      "craft": "winery",
+      "name": "Domaine Lepovo"
+    }
+  },
+  {
+    "id": "1221269982",
+    "visible": "true",
+    "version": "2",
+    "changeset": "143646438",
+    "timestamp": "2023-11-05T11:53:46Z",
+    "user": "sam4o2002",
+    "uid": "20553195",
+    "nodes": [
+      "11324050520",
+      "11324050521",
+      "11324050522",
+      "11324050523",
+      "11324050520"
+    ],
+    "tags": {
+      "addr:city": "\u041a\u0430\u0432\u0430\u0434\u0430\u0440\u0446\u0438",
+      "addr:housenumber": "16",
+      "addr:postcode": "1430",
+      "addr:street": "\u041a\u043e\u0441\u043e\u0432\u0441\u043a\u0430",
+      "building": "yes",
+      "country": "MKD",
+      "craft": "winery",
+      "name": "Zaharchev Winery and Distillery",
+      "name:mk": "\u0421\u0435\u043c\u0435\u0458\u043d\u0430 \u0432\u0438\u043d\u0430\u0440\u0438\u0458\u0430 \u201e\u0417\u0430\u0445\u0430\u0440\u0447\u0435\u0432\u201c",
+      "opening_hours": "Mo-Su 08:00-22:00",
+      "operator": "SJ",
+      "phone": "070 253 103",
+      "website": "https://www.zaharchev.mk/"
+    }
+  },
+  {
+    "id": "476221803",
+    "visible": "true",
+    "version": "2",
+    "changeset": "67114970",
+    "timestamp": "2019-02-11T22:42:01Z",
+    "user": "_Poliwrath_",
+    "uid": "8759140",
+    "nodes": [
+      "3832513020",
+      "4698518932",
+      "4698518933",
+      "4698518934",
+      "3832513020"
+    ],
+    "tags": {
+      "building": "yes",
+      "craft": "winery",
+      "name": "\u041a\u0430\u043c\u043d\u0438\u043a",
+      "tourism": "wine_cellar"
+    }
+  },
+  {
+    "id": "180716821",
+    "visible": "true",
+    "version": "3",
+    "changeset": "118251930",
+    "timestamp": "2022-03-08T20:37:25Z",
+    "user": "marczoutendijk",
+    "uid": "606555",
+    "nodes": [
+      "1911710837",
+      "1911710805",
+      "1911710841",
+      "1911783647",
+      "1911783687",
+      "1911710884",
+      "1911783622",
+      "1911784427",
+      "1911710769",
+      "1911783300",
+      "1911784588",
+      "1911783677",
+      "1911710843",
+      "1911710798",
+      "1911710817",
+      "1911710794",
+      "1911710837"
+    ],
+    "tags": {
+      "amenity": "wine_cellar",
+      "craft": "winery",
+      "int_name": "Popova Kula",
+      "name": "\u041f\u043e\u043f\u043e\u0432\u0430 \u041a\u0443\u043b\u0430",
+      "shop": "wine",
+      "tasting": "yes"
+    }
+  },
+  {
+    "id": "674123483",
+    "visible": "true",
+    "version": "1",
+    "changeset": "67723194",
+    "timestamp": "2019-03-02T20:35:26Z",
+    "user": "Svetle",
+    "uid": "480208",
+    "nodes": [
+      "6313103097",
+      "6313103098",
+      "6313103099",
+      "6313103100",
+      "6313103097"
+    ],
+    "tags": {
+      "addr:housenumber": "7",
+      "addr:street": "1519",
+      "building": "commercial",
+      "name": "Kartal Winery \u0412\u0438\u043d\u0430\u0440\u0441\u043a\u0430\u0442\u0430 \u0432\u0438\u0437\u0431\u0430 \u041a\u0410\u0420\u0422\u0410\u041b"
+    }
+  },
+  {
+    "id": "180725215",
+    "visible": "true",
+    "version": "3",
+    "changeset": "13086045",
+    "timestamp": "2012-09-12T17:41:06Z",
+    "user": "borces",
+    "uid": "131662",
+    "nodes": [
+      "1911826295",
+      "1911826013",
+      "1911825825",
+      "1911824114",
+      "1911826090",
+      "1911824208",
+      "1911825370",
+      "1911825618",
+      "1911826295"
+    ],
+    "tags": {
+      "amenity": "wine_cellar",
+      "attraction": "winery",
+      "industrial": "winery",
+      "int_name": "Vinarija Grkov",
+      "landuse": "industrial",
+      "man_made": "winery",
+      "name": "\u0412\u0438\u043d\u0430\u0440\u0438\u0458\u0430 \u0413\u0440\u043a\u043e\u0432",
+      "name:en": "Grkov Winery",
+      "shop": "wine",
+      "tasting": "yes",
+      "tourism": "winery"
+    }
+  },
+  {
+    "startLocation": {
+      "description": "Skopje, North Macedonia",
+      "type": "Point",
+      "coordinates": [42.00801776504513, 21.49025121340346],
+      "address": "Kamnik bb Skopje MK, 1000"
+    },
+    "ratingsAverage": 4.2,
+    "ratingsQuantity": 4,
+    "images": ["svkart1.jpg", "svkart2.jpg", "svkart3.jpg"],
+
+    "_id": "5c88fa8cf4afda39709c2988",
+    "name": "Kamnik",
+    "phone": "02 25 21 789",
+    "types": [
+      "KARTAL WINERY Virgo Muscat Hamburg Rosè 2021",
+      "KARTAL WINERY Virgo Cabernet Franc 2018",
+      "KARTAL WINERY Virgo Temjanika 2021",
+      "KARTAL WINERY TEMJANIKA SWEET 2019",
+      "KARTAL WINERY VRANEC 2020",
+      "KARTAL WINERY VRANEC VIKTORY 2015",
+      "KARTAL WINERY VRANEC ARISTOKRAT  2019",
+      "KARTAL WINERY ZILAVKA KLASIK 2020",
+      "KARTAL WINERY CABERNET SAUVIGNON BARRIQUE 2020",
+      "KARTAL WINERY VRANEC BARRIQUE 2021"
+    ],
+    "description": "Great service, great place, delicious food, great wine. We eat full lunch with wine and desert and everything was more than delicious. Maybe the best grilled vegetables I have ever tasted. Wines are beautiful.",
+    
+    "slug": "kamnik"
+  },
+  {
+    "startLocation": {
+      "description": "Skopje, North Macedonia",
+      "type": "Point",
+      "coordinates": [41.99735526620806, 21.425115242898197],
+      "address": "Blvd. Saint Clement of Ohrid 52, Skopje 1000"
+    },
+    "ratingsAverage": 4.2,
+    "ratingsQuantity": 4,
+    "images": ["svkart1.jpg", "svkart2.jpg", "svkart3.jpg"],
+
+    "_id": "5c88fa8cf4afda39709c2989",
+    "name": "Alkoteka",
+    "phone": "070 851 932",
+    "types": [
+      "KARTAL WINERY Virgo Muscat Hamburg Rosè 2021",
+      "KARTAL WINERY Virgo Cabernet Franc 2018",
+      "KARTAL WINERY Virgo Temjanika 2021",
+      "KARTAL WINERY TEMJANIKA SWEET 2019",
+      "KARTAL WINERY VRANEC 2020",
+      "KARTAL WINERY VRANEC VIKTORY 2015",
+      "KARTAL WINERY VRANEC ARISTOKRAT  2019",
+      "KARTAL WINERY ZILAVKA KLASIK 2020",
+      "KARTAL WINERY CABERNET SAUVIGNON BARRIQUE 2020",
+      "KARTAL WINERY VRANEC BARRIQUE 2021"
+    ],
+    "description": "Great service, great place, delicious food, great wine. We eat full lunch with wine and desert and everything was more than delicious. Maybe the best grilled vegetables I have ever tasted. Wines are beautiful.",
+    "imageCover": "Alkoteka.jpg",
+    "slug": "alkoteka"
+  },{
+    "startLocation": {
+      "description": "Shtip, North Macedonia",
+      "type": "Point",
+      "coordinates": [41.701903660655724, 22.156071123843354],
+      "address": "M5X4+MX, 6th km local road Stip-Radovis MK, Sofilari 2000"
+    },
+    "ratingsAverage": 3.6,
+    "ratingsQuantity": 2.8,
+    "images": ["svkart1.jpg", "svkart2.jpg", "svkart3.jpg"],
+
+    "_id": "5c88fa8cf4afda39709c2990",
+    "name": "Imako",
+    "phone": "032 308 703",
+    "types": [
+      "KARTAL WINERY Virgo Muscat Hamburg Rosè 2021",
+      "KARTAL WINERY Virgo Cabernet Franc 2018",
+      "KARTAL WINERY Virgo Temjanika 2021",
+      "KARTAL WINERY TEMJANIKA SWEET 2019",
+      "KARTAL WINERY VRANEC 2020",
+      "KARTAL WINERY VRANEC VIKTORY 2015",
+      "KARTAL WINERY VRANEC ARISTOKRAT  2019",
+      "KARTAL WINERY ZILAVKA KLASIK 2020",
+      "KARTAL WINERY CABERNET SAUVIGNON BARRIQUE 2020",
+      "KARTAL WINERY VRANEC BARRIQUE 2021"
+    ],
+    "description": "Great service, great place, delicious food, great wine. We eat full lunch with wine and desert and everything was more than delicious. Maybe the best grilled vegetables I have ever tasted. Wines are beautiful.",
+   
+    "slug": "imako"
+  },
+  {
+    "startLocation": {
+      "description": "Shtip, North Macedonia",
+      "type": "Point",
+      "coordinates": [41.75472070119993, 22.17138818151703],
+      "address": "Q53C+VH7, Shtip"
+    },
+    "ratingsAverage": 2.6,
+    "ratingsQuantity": 2,
+    "images": ["svkart1.jpg", "svkart2.jpg", "svkart3.jpg"],
+
+    "_id": "5c88fa8cf4afda39709c2991",
+    "name": "Anevski",
+    "phone": "070 394 157",
+    "types": [
+      "KARTAL WINERY Virgo Muscat Hamburg Rosè 2021",
+      "KARTAL WINERY Virgo Cabernet Franc 2018",
+      "KARTAL WINERY Virgo Temjanika 2021",
+      "KARTAL WINERY TEMJANIKA SWEET 2019",
+      "KARTAL WINERY VRANEC 2020",
+      "KARTAL WINERY VRANEC VIKTORY 2015",
+      "KARTAL WINERY VRANEC ARISTOKRAT  2019",
+      "KARTAL WINERY ZILAVKA KLASIK 2020",
+      "KARTAL WINERY CABERNET SAUVIGNON BARRIQUE 2020",
+      "KARTAL WINERY VRANEC BARRIQUE 2021"
+    ],
+    "description": "Great service, great place, delicious food, great wine. We eat full lunch with wine and desert and everything was more than delicious. Maybe the best grilled vegetables I have ever tasted. Wines are beautiful.",
+    
+    "slug": "anevski"
+  },
+  {
+    "startLocation": {
+      "description": "Kumanovo, North Macedonia",
+      "type": "Point",
+      "coordinates": [42.11610596611651, 21.748212223860804],
+      "address": "Kozjacka 15, Kumanovo 1300"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 4,
+    "images": ["svkart1.jpg", "svkart2.jpg", "svkart3.jpg"],
+    "_id": "5c88fa8cf4afda39709c2992",
+    "name": "Kokino",
+    "phone": "070236562",
+    "types": [
+      "KARTAL WINERY Virgo Muscat Hamburg Rosè 2021",
+      "KARTAL WINERY Virgo Cabernet Franc 2018",
+      "KARTAL WINERY Virgo Temjanika 2021",
+      "KARTAL WINERY TEMJANIKA SWEET 2019",
+      "KARTAL WINERY VRANEC 2020",
+      "KARTAL WINERY VRANEC VIKTORY 2015",
+      "KARTAL WINERY VRANEC ARISTOKRAT  2019",
+      "KARTAL WINERY ZILAVKA KLASIK 2020",
+      "KARTAL WINERY CABERNET SAUVIGNON BARRIQUE 2020",
+      "KARTAL WINERY VRANEC BARRIQUE 2021"
+    ],
+    "description": "Great service, great place, delicious food, great wine. We eat full lunch with wine and desert and everything was more than delicious. Maybe the best grilled vegetables I have ever tasted. Wines are beautiful.",
+    
+    "slug": "kokino"
+  },
+  {
+    "startLocation": {
+      "description": "Negotino, North Macedonia",
+      "type": "Point",
+      "coordinates": [41.532461793610274, 22.022232181507633],
+      "address": "G2JC+WW6, Kurija"
+    },
+    "ratingsAverage": 2.3,
+    "ratingsQuantity": 2,
+    "images": ["svkart1.jpg", "svkart2.jpg", "svkart3.jpg"],
+
+    "_id": "5c88fa8cf4afda39709c2993",
+    "name": "Vardarska dolina",
+    "phone": "071 320 867",
+    "types": [
+      "KARTAL WINERY Virgo Muscat Hamburg Rosè 2021",
+      "KARTAL WINERY Virgo Cabernet Franc 2018",
+      "KARTAL WINERY Virgo Temjanika 2021",
+      "KARTAL WINERY TEMJANIKA SWEET 2019",
+      "KARTAL WINERY VRANEC 2020",
+      "KARTAL WINERY VRANEC VIKTORY 2015",
+      "KARTAL WINERY VRANEC ARISTOKRAT  2019",
+      "KARTAL WINERY ZILAVKA KLASIK 2020",
+      "KARTAL WINERY CABERNET SAUVIGNON BARRIQUE 2020",
+      "KARTAL WINERY VRANEC BARRIQUE 2021"
+    ],
+    "description": "Great service, great place, delicious food, great wine. We eat full lunch with wine and desert and everything was more than delicious. Maybe the best grilled vegetables I have ever tasted. Wines are beautiful.",
+    "imageCover": "vardarska_dolina.jpg",
+    "slug": "vardarska-dolina"
+  },
+  {
+    "startLocation": {
+      "description": "Kavadarci, North Macedonia",
+      "type": "Point",
+      "coordinates": [41.52370076167113, 21.965540899379945],
+      "address": "GXC7+HVF, MK, Industriska BB, Rosoman 1422"
+    },
+    "ratingsAverage": 3.3,
+    "ratingsQuantity": 3,
+    "images": ["svkart1.jpg", "svkart2.jpg", "svkart3.jpg"],
+
+    "_id": "5c88fa8cf4afda39709c2994",
+    "name": "Movino",
+    "phone": "043 400 731",
+    "types": [
+      "KARTAL WINERY Virgo Muscat Hamburg Rosè 2021",
+      "KARTAL WINERY Virgo Cabernet Franc 2018",
+      "KARTAL WINERY Virgo Temjanika 2021",
+      "KARTAL WINERY TEMJANIKA SWEET 2019",
+      "KARTAL WINERY VRANEC 2020",
+      "KARTAL WINERY VRANEC VIKTORY 2015",
+      "KARTAL WINERY VRANEC ARISTOKRAT  2019",
+      "KARTAL WINERY ZILAVKA KLASIK 2020",
+      "KARTAL WINERY CABERNET SAUVIGNON BARRIQUE 2020",
+      "KARTAL WINERY VRANEC BARRIQUE 2021"
+    ],
+    "description": "Great service, great place, delicious food, great wine. We eat full lunch with wine and desert and everything was more than delicious. Maybe the best grilled vegetables I have ever tasted. Wines are beautiful.",
+    
+    "slug": "movino"
+  },
+  {
+    "startLocation": {
+      "description": "Kavadarci, North Macedonia",
+      "type": "Point",
+      "coordinates": [41.478527495563824, 22.01476404653774],
+      "address": "Industriska bb, Kavadarci 1430"
+    },
+    "ratingsAverage": 2.3,
+    "ratingsQuantity": 2,
+    "images": ["svkart1.jpg", "svkart2.jpg", "svkart3.jpg"],
+
+    "_id": "5c88fa8cf4afda39709c2995",
+    "name": "Temka Trejd",
+    "phone": "070302239",
+    "types": [
+      "KARTAL WINERY Virgo Muscat Hamburg Rosè 2021",
+      "KARTAL WINERY Virgo Cabernet Franc 2018",
+      "KARTAL WINERY Virgo Temjanika 2021",
+      "KARTAL WINERY TEMJANIKA SWEET 2019",
+      "KARTAL WINERY VRANEC 2020",
+      "KARTAL WINERY VRANEC VIKTORY 2015",
+      "KARTAL WINERY VRANEC ARISTOKRAT  2019",
+      "KARTAL WINERY ZILAVKA KLASIK 2020",
+      "KARTAL WINERY CABERNET SAUVIGNON BARRIQUE 2020",
+      "KARTAL WINERY VRANEC BARRIQUE 2021"
+    ],
+    "description": "Great service, great place, delicious food, great wine. We eat full lunch with wine and desert and everything was more than delicious. Maybe the best grilled vegetables I have ever tasted. Wines are beautiful.",
+    "imageCover": "Temka.jpg",
+    "slug": "temka"
+  },
+  {
+    "startLocation": {
+      "description": "Demir Kapija, North Macedonia",
+      "type": "Point",
+      "coordinates": [41.41411307728343, 22.23354153917414],
+      "address": "Marshal Tito 63, 1442"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 4,
+    "images": ["svkart1.jpg", "svkart2.jpg", "svkart3.jpg"],
+    "_id": "5c88fa8cf4afda39709c2996",
+    "name": "Kralska Vinarija",
+    "phone": "043 446 500",
+    "types": [
+      "KARTAL WINERY Virgo Muscat Hamburg Rosè 2021",
+      "KARTAL WINERY Virgo Cabernet Franc 2018",
+      "KARTAL WINERY Virgo Temjanika 2021",
+      "KARTAL WINERY TEMJANIKA SWEET 2019",
+      "KARTAL WINERY VRANEC 2020",
+      "KARTAL WINERY VRANEC VIKTORY 2015",
+      "KARTAL WINERY VRANEC ARISTOKRAT  2019",
+      "KARTAL WINERY ZILAVKA KLASIK 2020",
+      "KARTAL WINERY CABERNET SAUVIGNON BARRIQUE 2020",
+      "KARTAL WINERY VRANEC BARRIQUE 2021"
+    ],
+    "description": "Great service, great place, delicious food, great wine. We eat full lunch with wine and desert and everything was more than delicious. Maybe the best grilled vegetables I have ever tasted. Wines are beautiful.",
+    "slug": "kralska"
+  }
+]
