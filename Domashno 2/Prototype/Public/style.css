@@ -1,0 +1,135 @@
+html{
+    background: #490304;
+    max-width: 100%;
+}
+
+body{
+    margin: 0;
+}
+
+#logo{
+    background: #fcf9cc;
+}
+
+#cover{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation{
+    list-style-type: none;
+    display: flex;
+    float: right;
+    position: relative;
+    top: -19px;
+    height: 90px;
+}
+
+#navigation a{
+    color: #490304;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 3px;
+}
+
+#navigation a:hover{
+    cursor: pointer;
+    background: #490304;
+    color: #fcf9cc;
+}
+
+#current{
+    background: #490304;
+    color: #fcf9cc;
+}
+
+a h3{
+    font-weight: bold;
+    padding: 24px;
+}
+
+.tail {
+    text-align: center;
+    font-size: 14pt;
+    margin: 0;
+}
+#tail{
+    color: #fcf9cc;
+    margin: 0;
+}
+
+
+/*  About us  */
+
+#aboutUs{
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+
+#aboutUs.vertical-layout {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+#aboutUs.vertical-layout div {
+    width: 100%;
+}
+
+#aboutUsSlika{
+    object-fit: cover;
+    max-width: 800px;
+    height: 563px;
+    margin-right: 10px;
+}
+
+#left_Side{
+    margin: auto 5px;
+    width: 50%;
+    border: 3px solid #490304;
+    padding: 10px;
+    color: #fcf9cc;
+    font-size: 12pt;
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+}
+
+#left_Side h2{
+    padding-bottom: 12px;
+}
+
+#intro{
+    text-align: justify ;
+    padding-bottom: 17px;
+}
+
+#ready{
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fcf9cc;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #490304;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    margin: 0;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    vertical-align: baseline;
+    width: 200px;
+}
+
+#ready:hover{
+    background-color: #e0dca1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
