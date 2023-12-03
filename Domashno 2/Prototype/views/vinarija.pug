@@ -70,7 +70,7 @@ html(lang="en")
         #tail
           p.tail  © 2023 @Винарии.мк
     #map
-    .coords(id="najava_blok", data-card-id=`${event.startLocation.coordinates[0]} ${event.startLocation.coordinates[1]} ${event.name}` ) 
-script(defer,src="/scriptM.js",type='module')
+    .coord(id="najava_blok", data-card-id=`${event.startLocation.coordinates[0]} ${event.startLocation.coordinates[1]} ${event.slug}` ) 
+//- script(defer,src="/scriptM.js",type='module')
 script(src="/bundle.js")  
 

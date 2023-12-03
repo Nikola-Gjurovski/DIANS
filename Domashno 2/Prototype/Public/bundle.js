@@ -14712,7 +14712,31 @@ if (navigator.geolocation) {
     }).addTo(map);
     divs.forEach(function (marker) {
       var coords = marker.getAttribute("data-card-id").split(" ");
-      _leaflet.default.marker([coords[0], coords[1]]).addTo(map).bindPopup('<a href="' + marker.url + '" target="_blank">' + coords[2] + "</a>");
+      _leaflet.default.marker([coords[0], coords[1]]).addTo(map).bindPopup("<h3>" + coords[2] + "</h3>");
+    });
+    divs.forEach(function (marker) {
+      var coords = marker.getAttribute("data-card-id").split(" ");
+      marker.addEventListener('click', function () {
+        map.setView([coords[0], coords[1]], 13, {
+          animate: true,
+          pan: {
+            duration: 2
+          }
+        });
+      });
+    });
+    // var mapa = L.map("map").setView(coordinates, 6)
+    var div = document.querySelector(".coord");
+    var coords = div.getAttribute("data-card-id").split(" ");
+    console.log(coords);
+    _leaflet.default.marker([coords[0], coords[1]]).addTo(map).bindPopup(
+    // '<a href="' + div.url + '" target="_blank">' + coords[2] + "</a>"
+    "<h3>" + coords[2] + "</h3>");
+    map.setView([coords[0], coords[1]], 13, {
+      animate: true,
+      pan: {
+        duration: 1
+      }
     });
   });
 }
@@ -14741,7 +14765,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53524" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49909" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
