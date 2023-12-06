@@ -1,0 +1,171 @@
+<osm version="0.6" generator="CGImap 0.8.9 (2472529 spike-07.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<node id="5167052721" visible="true" version="2" changeset="92342375" timestamp="2020-10-12T09:33:56Z" user="fuck you OSM" uid="9545352" lat="41.7777740" lon="21.7409905">
+		<tag k="addr:city" v="Veles"/>
+		<tag k="craft" v="winery"/>
+		<tag k="name" v="Chateau Sopot"/>
+		<tag k="name:mk" v="Шато Сопот"/>
+		<tag k="opening_hours" v="Mo-Su 09:00-22:00"/>
+		<tag k="phone" v="+389 78 663 300"/>
+	</node>
+	<way id="533757101" visible="true" version="3" changeset="143284589" timestamp="2023-10-28T21:24:14Z" user="b-jazz-bot" uid="9451067">
+		<nd ref="5177854589"/>
+		<nd ref="6644606350"/>
+		<nd ref="5177854590"/>
+		<nd ref="5177854591"/>
+		<nd ref="5177854592"/>
+		<nd ref="5177854589"/>
+		<tag k="craft" v="winery"/>
+		<tag k="name" v="Vinarija Stobi"/>
+		<tag k="website" v="https://www.stobiwinery.mk/"/>
+	</way>
+	<way id="370311640" visible="true" version="1" changeset="33980657" timestamp="2015-09-12T13:34:43Z" user="PantherStrix" uid="1468248">
+		<nd ref="3740200042"/>
+		<nd ref="3740200039"/>
+		<nd ref="3740203943"/>
+		<nd ref="3740200043"/>
+		<nd ref="3740200042"/>
+		<tag k="building" v="yes"/>
+		<tag k="craft" v="winery"/>
+		<tag k="name" v="Domaine Lepovo"/>
+	</way>
+	<way id="1221269982" visible="true" version="2" changeset="143646438" timestamp="2023-11-05T11:53:46Z" user="sam4o2002" uid="20553195">
+		<nd ref="11324050520"/>
+		<nd ref="11324050521"/>
+		<nd ref="11324050522"/>
+		<nd ref="11324050523"/>
+		<nd ref="11324050520"/>
+		<tag k="addr:city" v="Кавадарци"/>
+		<tag k="addr:housenumber" v="16"/>
+		<tag k="addr:postcode" v="1430"/>
+		<tag k="addr:street" v="Косовска"/>
+		<tag k="building" v="yes"/>
+		<tag k="country" v="MKD"/>
+		<tag k="craft" v="winery"/>
+		<tag k="name" v="Zaharchev Winery and Distillery"/>
+		<tag k="name:mk" v="Семејна винарија „Захарчев“"/>
+		<tag k="opening_hours" v="Mo-Su 08:00-22:00"/>
+		<tag k="operator" v="SJ"/>
+		<tag k="phone" v="070 253 103"/>
+		<tag k="website" v="https://www.zaharchev.mk/"/>
+	</way>
+	<way id="476221803" visible="true" version="2" changeset="67114970" timestamp="2019-02-11T22:42:01Z" user="_Poliwrath_" uid="8759140">
+		<nd ref="3832513020"/>
+		<nd ref="4698518932"/>
+		<nd ref="4698518933"/>
+		<nd ref="4698518934"/>
+		<nd ref="3832513020"/>
+		<tag k="building" v="yes"/>
+		<tag k="craft" v="winery"/>
+		<tag k="name" v="Камник"/>
+		<tag k="tourism" v="wine_cellar"/>
+	</way>
+	<way id="180716821" visible="true" version="3" changeset="118251930" timestamp="2022-03-08T20:37:25Z" user="marczoutendijk" uid="606555">
+		<nd ref="1911710837"/>
+		<nd ref="1911710805"/>
+		<nd ref="1911710841"/>
+		<nd ref="1911783647"/>
+		<nd ref="1911783687"/>
+		<nd ref="1911710884"/>
+		<nd ref="1911783622"/>
+		<nd ref="1911784427"/>
+		<nd ref="1911710769"/>
+		<nd ref="1911783300"/>
+		<nd ref="1911784588"/>
+		<nd ref="1911783677"/>
+		<nd ref="1911710843"/>
+		<nd ref="1911710798"/>
+		<nd ref="1911710817"/>
+		<nd ref="1911710794"/>
+		<nd ref="1911710837"/>
+		<tag k="amenity" v="wine_cellar"/>
+		<tag k="craft" v="winery"/>
+		<tag k="int_name" v="Popova Kula"/>
+		<tag k="name" v="Попова Кула"/>
+		<tag k="shop" v="wine"/>
+		<tag k="tasting" v="yes"/>
+	</way>
+	<way id="674123483" visible="true" version="1" changeset="67723194" timestamp="2019-03-02T20:35:26Z" user="Svetle" uid="480208">
+		<nd ref="6313103097"/>
+		<nd ref="6313103098"/>
+		<nd ref="6313103099"/>
+		<nd ref="6313103100"/>
+		<nd ref="6313103097"/>
+		<tag k="addr:housenumber" v="7"/>
+		<tag k="addr:street" v="1519"/>
+		<tag k="building" v="commercial"/>
+		<tag k="name" v="Kartal Winery Винарската визба КАРТАЛ"/>
+	</way>
+	<node id="6815931485" visible="true" version="1" changeset="74777891" timestamp="2019-09-22T17:52:47Z" user="YunDi88" uid="9047835" lat="42.0000999" lon="21.4209535">
+		<tag k="amenity" v="pub"/>
+		<tag k="name" v="Stobi Winery"/>
+	</node>
+	<node id="5901752487" visible="true" version="1" changeset="62519365" timestamp="2018-09-12T12:36:43Z" user="KorBorNor" uid="6066920" lat="42.0001818" lon="21.4358622">
+		<tag k="amenity" v="pub"/>
+		<tag k="name:en" v="Winery Temov"/>
+	</node>
+	<node id="5667327121" visible="true" version="1" changeset="59575728" timestamp="2018-06-05T17:14:24Z" user="pande kitanov" uid="8377443" lat="41.4943704" lon="22.0915153">
+		<tag k="addr:postcode" v="1440"/>
+		<tag k="addr:street" v="Индустриска"/>
+		<tag k="email" v="bovin@t.mk"/>
+		<tag k="name" v="Бовин винарија"/>
+		<tag k="name:en" v="Bovin Winery"/>
+		<tag k="name:hr" v="Bovin vinarija"/>
+		<tag k="name:ru" v="Бовин"/>
+		<tag k="opening_hours" v="Mo-Fr 08:00-16:00"/>
+		<tag k="phone" v="043365322"/>
+		<tag k="shop" v="wine"/>
+		<tag k="website" v="http://www.bovin.com.mk"/>
+	</node>
+	<way id="180725215" visible="true" version="3" changeset="13086045" timestamp="2012-09-12T17:41:06Z" user="borces" uid="131662">
+		<nd ref="1911826295"/>
+		<nd ref="1911826013"/>
+		<nd ref="1911825825"/>
+		<nd ref="1911824114"/>
+		<nd ref="1911826090"/>
+		<nd ref="1911824208"/>
+		<nd ref="1911825370"/>
+		<nd ref="1911825618"/>
+		<nd ref="1911826295"/>
+		<tag k="amenity" v="wine_cellar"/>
+		<tag k="attraction" v="winery"/>
+		<tag k="industrial" v="winery"/>
+		<tag k="int_name" v="Vinarija Grkov"/>
+		<tag k="landuse" v="industrial"/>
+		<tag k="man_made" v="winery"/>
+		<tag k="name" v="Винарија Грков"/>
+		<tag k="name:en" v="Grkov Winery"/>
+		<tag k="shop" v="wine"/>
+		<tag k="tasting" v="yes"/>
+		<tag k="tourism" v="winery"/>
+	</way>
+	<way id="180725215" visible="true" version="3" changeset="13086045" timestamp="2012-09-12T17:41:06Z" user="borces" uid="131662">
+		<nd ref="1911826295"/>
+		<nd ref="1911826013"/>
+		<nd ref="1911825825"/>
+		<nd ref="1911824114"/>
+		<nd ref="1911826090"/>
+		<nd ref="1911824208"/>
+		<nd ref="1911825370"/>
+		<nd ref="1911825618"/>
+		<nd ref="1911826295"/>
+		<tag k="amenity" v="wine_cellar"/>
+		<tag k="attraction" v="winery"/>
+		<tag k="industrial" v="winery"/>
+		<tag k="int_name" v="Vinarija Grkov"/>
+		<tag k="landuse" v="industrial"/>
+		<tag k="man_made" v="winery"/>
+		<tag k="name" v="Винарија Грков"/>
+		<tag k="name:en" v="Grkov Winery"/>
+		<tag k="shop" v="wine"/>
+		<tag k="tasting" v="yes"/>
+		<tag k="tourism" v="winery"/>
+	</way>
+	<node id="9870303417" visible="true" version="2" changeset="123277057" timestamp="2022-07-06T12:48:49Z" user="MightyMXC" uid="9646870" lat="41.1848848" lon="20.8771330">
+		<tag k="email" v="info@monasterywinery.com"/>
+		<tag k="name:en" v="monastery winery"/>
+		<tag k="opening_hours" v="Mo-Su 08:00-23:00"/>
+		<tag k="phone" v="+389 78474656"/>
+		<tag k="shop" v="wine"/>
+		<tag k="website" v="https://monasterywinery.com"/>
+	</node>
+</osm>

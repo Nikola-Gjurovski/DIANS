@@ -1,0 +1,142 @@
+html{
+    background: #490304;
+    max-width: 100%;
+}
+
+body{
+    margin: 0;
+}
+
+#logo{
+    background: #fcf9cc;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+#cover{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation{
+    list-style-type: none;
+    display: flex;
+    float: right;
+    position: relative;
+    top: -19px;
+    height: 90px;
+    background: #fcf9cc;
+}
+
+#navigation a{
+    color: #490304;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 3px;
+    background: #fcf9cc;
+}
+
+#navigation a:hover{
+    cursor: pointer;
+    background: #490304;
+    color: #fcf9cc;
+}
+
+#current{
+    background: #490304;
+    color: #fcf9cc;
+}
+
+a h3{
+    font-weight: bold;
+    padding: 24px;
+}
+
+.tail {
+    text-align: center;
+    font-size: 14pt;
+    margin: 0;
+}
+#tail{
+    color: #fcf9cc;
+    margin: 10px 0 0;
+}
+
+/* Vinariija css */
+
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+
+#winery_info{
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: auto 10px;
+    border: 3px solid transparent;
+    padding: 10px;
+    color: #fcf9cc;
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+    max-width: 450px;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 90px;
+
+}
+
+h4, p{
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 10px;
+}
+ul li{
+    list-style: none;
+}
+
+#map{
+    background: black;
+    width: 600px;
+    height: 700px;
+    position: fixed;
+    left: 594px;
+    top: 143px;
+   
+    /* display: flex;
+    justify-content: center;
+    width: 100px; */
+}
+
+ul{
+    list-style-type: square;
+}
+
+/* Komentari */
+
+#commento{
+    background: #fcf9cc;
+    color: #490304;
+    margin-top: 10px;
+    text-align: left;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+#commento button{
+    float: right;
+    background: #490304;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top: 10px;
+    color: #fcf9cc;
+}
+
+#commento .commento-sort-policy-buttons-container .commento-sort-policy-buttons .commento-sort-policy-button-selected {
+    color: #1971c2;
+    font-weight: 700;
+}

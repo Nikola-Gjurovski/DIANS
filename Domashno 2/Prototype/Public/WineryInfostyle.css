@@ -103,7 +103,7 @@ ul li{
     background: black;
     width: 600px;
     height: 700px;
-    position: relative;
+    position: fixed;
     left: 594px;
     top: 143px;
    

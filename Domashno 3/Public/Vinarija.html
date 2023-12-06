@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информации за винарија</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="WineryInfostyle.css">
+    <script defer src="rating.js" defer></script>\
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+            integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+            crossorigin=""
+    />
+    <script
+            defer
+            src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""
+    ></script>
+    <script defer src="vk.js"></script>
+
+    
+   
+
+
+<body>
+    <div id="logo">
+        <a id="logoJS" href="Home page.html"><img src="images/logo.jpg" alt="logo"></a>
+        <div id="navigation">
+            <a href="Home page.html"><h3>Почетна</h3></a>
+            <a href="About.html"><h3>За&nbsp;нас</h3></a>
+            <a href="Mapa.html"><h3 id="current">Мапа</h3></a>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="winery_info">
+            <h2>Име на винаријата</h2> <!-- ime na vinarijata -->
+            <br>
+            <h4>Категорија: </h4>
+                <p></p><br>
+            <h4>Локација: </h4>
+                <p></p><br>
+            <h4>Адреса: </h4>
+                <p></p><br>
+            <h4>Работно време: </h4>
+                <p></p><br>
+            <h4>Телефон: </h4>
+                <p></p><br>
+            <h4>Веб страна: </h4>
+                <p></p><br>
+            <h4>Каталог на вина: </h4>
+                <ul>
+
+                </ul>
+            <h4>Рејтинг според Google reviews:</h4>
+                <p></p><br>
+            <br>
+            <div id="sliki"></div>
+            <br><br>
+            <div class="rw-ui-container"></div>
+            <br><br><br>
+            <div id="commento"></div>
+            <div id="tail">
+                <p class="tail"> © 2023 @Винарии.мк</p>
+            </div>
+        </div>
+        <div id="map">
+    
+        </div>
+        </div>
+    <!-- <div id="map">
+    
+    </div> -->
+    </div>
+     <div id="najava_blok"
+     class="coords"
+     data-card-id="41.7777740 21.7409905 Stobi"></div> 
+   
+    <script type="module" src="node_modules/leaflet/dist/leaflet.js"></script>
+</body>
+</html>

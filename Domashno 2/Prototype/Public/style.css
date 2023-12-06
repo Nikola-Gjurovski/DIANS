@@ -24,6 +24,7 @@ body{
     position: relative;
     top: -19px;
     height: 90px;
+    background-color: #fcf9cc;
 }
 
 #navigation a{
