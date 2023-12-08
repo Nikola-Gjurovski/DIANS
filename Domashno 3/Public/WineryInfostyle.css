@@ -140,7 +140,7 @@ ul{
     color: #1971c2;
     font-weight: 700;
 }
-#far{
+.far{
     display: flex;
     text-align: center;
     align-items: center;
