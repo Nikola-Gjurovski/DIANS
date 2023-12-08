@@ -7,7 +7,7 @@ const catchAsync = (fun) => {
   };
 };
 exports.getOverview = catchAsync(async (req, res, next) => {
-  const events = await Winary.find();
+  const events = await Winary.find().sort({name:1});
   res.status(200).render("mapa", {
     title: "Mapa Vinarii",
     events,
