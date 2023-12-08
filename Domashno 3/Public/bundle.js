@@ -14690,11 +14690,49 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./images\\layers.png":[["layers.833a3ad0.png","../node_modules/leaflet/dist/images/layers.png"],"../node_modules/leaflet/dist/images/layers.png"],"./images\\layers-2x.png":[["layers-2x.7859b0a7.png","../node_modules/leaflet/dist/images/layers-2x.png"],"../node_modules/leaflet/dist/images/layers-2x.png"],"./images\\marker-icon.png":[["marker-icon.28bcaf97.png","../node_modules/leaflet/dist/images/marker-icon.png"],"../node_modules/leaflet/dist/images/marker-icon.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"script.js":[function(require,module,exports) {
+},{"./images\\layers.png":[["layers.833a3ad0.png","../node_modules/leaflet/dist/images/layers.png"],"../node_modules/leaflet/dist/images/layers.png"],"./images\\layers-2x.png":[["layers-2x.7859b0a7.png","../node_modules/leaflet/dist/images/layers-2x.png"],"../node_modules/leaflet/dist/images/layers-2x.png"],"./images\\marker-icon.png":[["marker-icon.28bcaf97.png","../node_modules/leaflet/dist/images/marker-icon.png"],"../node_modules/leaflet/dist/images/marker-icon.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"search.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.sr = void 0;
+// let divs=document.querySelectorAll('.coords');
+// let search=document.getElementById('src')
+// document.getElementById('search-bar').addEventListener('submit',e=>{
+// e.preventDefault();   
+// let text=search.value.toLowerCase()
+// console.log(text)
+// divs.forEach((items)=>{
+// const slug = items.getAttribute("data-card-id").split(" ")[2];
+// console.log(slug)
+// if(slug.includes(text)){
+//     items.style.opacity=1 
+//     items.style.display='block'
+// }
+// else{
+//     items.style.opacity=0
+//     items.style.display='none'
+//     console.log(search.value)
+// }
+// })
+
+// })
+var sr = exports.sr = function sr(slug, text, items) {
+  if (slug.includes(text)) {
+    items.style.opacity = 1;
+    items.style.display = 'block';
+  } else {
+    items.style.opacity = 0;
+    items.style.display = 'none';
+  }
+};
+},{}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _leaflet = _interopRequireDefault(require("leaflet"));
 require("leaflet/dist/leaflet.css");
+var _search = require("./search");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position) {
@@ -14711,12 +14749,15 @@ if (navigator.geolocation) {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
     divs.forEach(function (marker) {
-      var coords = marker.getAttribute("data-card-id").split(" ");
-      _leaflet.default.marker([coords[0], coords[1]]).addTo(map).bindPopup("<h3>" + coords[2] + "</h3>");
+      if (marker.style.display !== "none") {
+        // console.log('klik')
+        var coords = marker.getAttribute("data-card-id").split(" ");
+        _leaflet.default.marker([coords[0], coords[1]]).addTo(map).bindPopup("<p>" + coords[2] + "</p>");
+      }
     });
     divs.forEach(function (marker) {
       var coords = marker.getAttribute("data-card-id").split(" ");
-      marker.addEventListener('click', function () {
+      marker.addEventListener("click", function () {
         map.setView([coords[0], coords[1]], 13, {
           animate: true,
           pan: {
@@ -14725,22 +14766,78 @@ if (navigator.geolocation) {
         });
       });
     });
+    if (document.getElementById("search-bar")) {
+      document.getElementById("search-bar").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var text = document.getElementById("src").value.toLowerCase();
+        map.eachLayer(function (layer) {
+          if (layer instanceof _leaflet.default.Marker) {
+            map.removeLayer(layer);
+          }
+        });
+        divs.forEach(function (marker) {
+          var coords = marker.getAttribute("data-card-id").split(" ")[2];
+          (0, _search.sr)(coords, text, marker);
+          if (marker.style.display !== "none") {
+            // console.log('klik')
+            var _coords = marker.getAttribute("data-card-id").split(" ");
+            _leaflet.default.marker([_coords[0], _coords[1]]).addTo(map).bindPopup("<p>" + _coords[2] + "</p>");
+          }
+        });
+      });
+    }
+
     // var mapa = L.map("map").setView(coordinates, 6)
     var div = document.querySelector(".coord");
-    var coords = div.getAttribute("data-card-id").split(" ");
-    console.log(coords);
-    _leaflet.default.marker([coords[0], coords[1]]).addTo(map).bindPopup(
-    // '<a href="' + div.url + '" target="_blank">' + coords[2] + "</a>"
-    "<h3>" + coords[2] + "</h3>");
-    map.setView([coords[0], coords[1]], 13, {
-      animate: true,
-      pan: {
-        duration: 1
-      }
-    });
+    if (div) {
+      var coords = div.getAttribute("data-card-id").split(" ");
+      console.log(coords);
+      _leaflet.default.marker([coords[0], coords[1]]).addTo(map).bindPopup(
+      // '<a href="' + div.url + '" target="_blank">' + coords[2] + "</a>"
+      "<h3>" + coords[2] + "</h3>");
+      map.setView([coords[0], coords[1]], 13, {
+        animate: true,
+        pan: {
+          duration: 1
+        }
+      });
+    }
   });
 }
-},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","leaflet/dist/leaflet.css":"../node_modules/leaflet/dist/leaflet.css"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var distanceButton = document.getElementById("how_far");
+
+// Event listener for the button click
+distanceButton.addEventListener("click", function () {
+  // Get your current geolocation coordinates
+  navigator.geolocation.getCurrentPosition(function (position) {
+    var _position$coords = position.coords,
+      latitude = _position$coords.latitude,
+      longitude = _position$coords.longitude;
+    var currentCoords = [latitude, longitude];
+
+    // Get the target location coordinates from a specific div attribute (for example, ".coord")
+    var targetDiv = document.querySelector(".coord");
+    if (targetDiv) {
+      var targetCoords = targetDiv.getAttribute("data-card-id").split(" ");
+
+      // Create a polyline between your current location and the target location
+      //const polyline = L.polyline([currentCoords, [targetCoords[0], targetCoords[1]]], { color: 'red' }).addTo(map);
+
+      // Calculate distance using turf.js
+      var from = turf.point(currentCoords);
+      var to = turf.point([targetCoords[0], targetCoords[1]]);
+      var options = {
+        units: "kilometers"
+      };
+      var distance = turf.distance(from, to, options);
+
+      // Display the distance on the map near the middle of the line
+      var middleCoords = [(currentCoords[0] + parseFloat(targetCoords[0])) / 2, (currentCoords[1] + parseFloat(targetCoords[1])) / 2];
+      _leaflet.default.marker(middleCoords).addTo(map).bindPopup("<p>Distance: ".concat(distance.toFixed(2), " kilometers</p>"));
+    }
+  });
+});
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","leaflet/dist/leaflet.css":"../node_modules/leaflet/dist/leaflet.css","./search":"search.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -14765,7 +14862,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49909" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60162" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

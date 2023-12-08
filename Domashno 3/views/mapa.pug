@@ -19,13 +19,13 @@ html(lang="en")
             a(href='/')            
              img(src="images/logo.jpg", width="300")
         form#search-bar
-          input(type="search")
+          input#src(type="search")
           div
             p 🔍    
          
         #block
          each event in events
-          form.coords(id="najava_blok", data-card-id=`${event.startLocation.coordinates[0]} ${event.startLocation.coordinates[1]} ${event.name}`)
+          form.coords(id="najava_blok", data-card-id=`${event.startLocation.coordinates[0]} ${event.startLocation.coordinates[1]} ${event.slug}`)
             .red1
               ul
                 li
@@ -42,4 +42,4 @@ html(lang="en")
       #map
     //- script(defer, src="/scriptM.js",type='module')
     script( src="/bundle.js")
-    //- script(src="/vk.js")
+    //- script(src="/search.js")
