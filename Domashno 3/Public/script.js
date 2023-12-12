@@ -2,7 +2,7 @@ import L from "leaflet";
 
 import "leaflet/dist/leaflet.css";
 import { sr } from "./search";
-import * as turf from '@turf/turf';
+import * as turf from "@turf/turf";
 let map;
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position) {
@@ -127,8 +127,11 @@ distanceButton.addEventListener("click", () => {
       const targetCoords = targetDiv.getAttribute("data-card-id").split(" ");
 
       // Create a polyline between your current location and the target location
-      const polylineCoords = [currentCoords, [targetCoords[0], targetCoords[1]]];
-      const polyline = L.polyline(polylineCoords, { color: 'red' }).addTo(map);
+      const polylineCoords = [
+        currentCoords,
+        [targetCoords[0], targetCoords[1]],
+      ];
+      const polyline = L.polyline(polylineCoords, { color: "red" }).addTo(map);
 
       // Calculate distance using turf.js
       const from = turf.point(currentCoords);
@@ -144,13 +147,25 @@ distanceButton.addEventListener("click", () => {
       // L.marker(middleCoords)
       //   .addTo(map)
       //   .bindPopup(`<p>Distance: ${distance.toFixed(2)} kilometers</p>`);
-      document.getElementById('distance').innerHTML=`${distance.toFixed(2)} km`;
+      document.getElementById("distance").innerHTML = `${distance.toFixed(
+        2
+      )} km`;
 
       // Add markers for the current and target locations
-      const stri='Вашата локација'
-      L.marker(currentCoords).addTo(map).bindPopup("<p>" + stri + "</p>");
-     
-      L.marker([targetCoords[0], targetCoords[1]]).addTo(map).bindPopup("<p>"+targetCoords[2]+ "</p>");;
+      const stri = "Вашата локација";
+      L.marker(currentCoords)
+        .addTo(map)
+        .bindPopup("<p>" + stri + "</p>");
+
+      L.marker([targetCoords[0], targetCoords[1]])
+        .addTo(map)
+        .bindPopup("<p>" + targetCoords[2] + "</p>");
+      map.setView([targetCoords[0], targetCoords[1]], 7, {
+        animate: true,
+        pan: {
+          duration: 1,
+        },
+      });
     }
   });
 });

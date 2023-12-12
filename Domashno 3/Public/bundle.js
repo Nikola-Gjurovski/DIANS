@@ -36757,7 +36757,7 @@ distanceButton.addEventListener("click", function () {
       // Create a polyline between your current location and the target location
       var polylineCoords = [currentCoords, [targetCoords[0], targetCoords[1]]];
       var polyline = _leaflet.default.polyline(polylineCoords, {
-        color: 'red'
+        color: "red"
       }).addTo(map);
 
       // Calculate distance using turf.js
@@ -36773,13 +36773,18 @@ distanceButton.addEventListener("click", function () {
       // L.marker(middleCoords)
       //   .addTo(map)
       //   .bindPopup(`<p>Distance: ${distance.toFixed(2)} kilometers</p>`);
-      document.getElementById('distance').innerHTML = "".concat(distance.toFixed(2), " km");
+      document.getElementById("distance").innerHTML = "".concat(distance.toFixed(2), " km");
 
       // Add markers for the current and target locations
-      var stri = 'Вашата локација';
+      var stri = "Вашата локација";
       _leaflet.default.marker(currentCoords).addTo(map).bindPopup("<p>" + stri + "</p>");
       _leaflet.default.marker([targetCoords[0], targetCoords[1]]).addTo(map).bindPopup("<p>" + targetCoords[2] + "</p>");
-      ;
+      map.setView([targetCoords[0], targetCoords[1]], 7, {
+        animate: true,
+        pan: {
+          duration: 1
+        }
+      });
     }
   });
 });
@@ -36808,7 +36813,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50772" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56670" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
