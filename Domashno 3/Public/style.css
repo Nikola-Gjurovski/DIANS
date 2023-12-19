@@ -38,7 +38,8 @@ body{
     display: flex;
     float: right;
     top: -10px;
-    left: 870px;
+    /* left: 870px; */
+    left:591px;
     right: 0;
     height: 70px;
     background: #fcf9cc;
@@ -336,7 +337,7 @@ a h3{
 }
 
 /* Media query for smaller screens */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
     /* Home i about */
     #cover{
         height: 300px;

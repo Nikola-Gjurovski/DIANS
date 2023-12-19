@@ -163,7 +163,7 @@ ul{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1200px) {
     #wrapper {
         flex-direction: column;
         margin-left: 10px;
