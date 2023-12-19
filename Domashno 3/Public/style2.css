@@ -1,3 +1,10 @@
+
+body, h1, h2, h3, p, img, ul, ol, li, figure, figcaption, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 :root {
   --color-background: #490304;
   --color-bloks: #fcf9cc;
@@ -6,6 +13,7 @@
 }
 body {
   font-family: "Manrope", sans-serif;
+  margin: 0;
   /* display: flex;
   align-items: center;
   justify-content: center; */
@@ -13,13 +21,13 @@ body {
 
 #main {
   display: flex;
- margin-top: 30px;
   align-items: center;
 }
 #header {
   display: flex;
   text-align: center;
   justify-content: center;
+  background: #fcf9cc;
 }
 #left_corcner {
   background-color: var(--color-background);
@@ -72,15 +80,22 @@ h1 {
 .red1 {
   margin-top: 10px;
   margin-bottom: 20px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-top: 19px;
 }
 
 .red1 ul li {
   display: inline-block;
   margin: 1em 1em 0 0;
 }
+.red1 ul li a{
+  text-decoration: none;
+}
 .red1 ul li p {
   color: black;
   font-size: 18px;
+  
 }
 .golem {
   width: 70px;
@@ -96,6 +111,7 @@ h1 {
 }
 #red2 {
   margin-top: -23px;
+  padding-left: 20px;
 }
 input {
   border-radius: 8px;
@@ -136,7 +152,7 @@ select {
 #block {
   overflow: scroll;
   overflow-x: hidden;
-  height: 550px;
+  height: 627px;
   margin-bottom: 150px;
 }
 #block::-webkit-scrollbar {
@@ -174,6 +190,8 @@ text-align: center;
 }
 #search-bar div p{
   font-size: 30px;
+  margin-top: 28px;
+    margin-right: 3px;
 }
 
 
@@ -231,6 +249,40 @@ a h3{
   margin: 0;
 }
 #tail{
-  color: #fcf9cc;
-  margin: 10px 0 0;
+  color: #490304;
+    margin: 0;
+    background: #fcf9cc;
+    padding: 20px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1300px) {
+
+  #main {
+    display: flow-root;
+    margin-top: 0;
+  }
+
+  #left_corcner{
+    width: 100%;
+  }
+
+  #header{
+    display: flow-root;
+  }
+
+  #map{
+    width: 100%;
+    height: 920px;
+  }
+
+  #tail {
+    display: block;
+    color: #490304;
+    margin: 0;
+    background: #fcf9cc;
+    padding: 20px;
+    font-weight: bold;
+}
+
 }

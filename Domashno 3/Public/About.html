@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>За нас</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="logo">
+        <a id="logoJS" href="Home page.html"><img src="images/logo.jpg" alt="logo"></a>
+        <div id="navigation">
+            <a href="Home page.html"><h3>Почетна</h3></a>
+            <a href="About.html"><h3 id="current">За&nbsp;нас</h3></a>
+            <a href="Mapa.html"><h3>Мапа</h3></a>
+        </div>
+    </div>
+
+    <div id="aboutUs">
+        <div id="left_Side" class="col-6 col-s-9">
+            <h2>Која е целта на Винарии.мк?</h2><br>
+            <p id="intro">
+                Добредојдовте во светот на виното, каде што секоја гранка
+                раскажува своја приказна и секоја голтка претставува неодолива емоција. <br><br>
+                Ние, како тимот кој стои зад оваа платформа, сакаме да ви овозможиме
+                несекојдневно патување низ бескрајните редови лозја и винарии во нашата земја. <br><br>
+                Секоја винарија има своја приказна и историја. Секое вино што ќе го пробате
+                е олицетворение на македонската традиција и страст за уметноста на производство на вино. <br><br>
+                Ние ќе бидеме вашиот водич низ царството на македонските винарии
+                со цел да ви овозможиме да ја откриете винската извонредност на Македонија. <br><br>
+                Дали сте подготвени да ја започнете вашата следна незаборавна авантура?
+            </p>
+            <input type="button" value="Да!" id="ready" onclick="window.location.href='Mapa.html';">
+
+        </div>
+        <video max-width="50px" height="500px" margin-right="20px" autoplay muted loop id="myVideo">
+            <source src="Media2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="main_box">
+        <div class="img img1"></div>
+        <div class="img img2"></div>
+        <div class="img img3"></div>
+        <div class="img img4"></div>
+        <div class="img img5"></div>
+        <div class="img img6"></div>
+        <div class="img img7"></div>
+        <div class="img img8"></div>
+        <div class="img img9"></div>
+        <div class="img img10"></div>
+        <div class="img img11"></div>
+        <div class="img img12"></div>
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=61554727830080" target="_blank"><img src="images/facebook.png" alt="Follow us on Facebook"></a>
+        <a href="https://twitter.com/vinarii4004" target="_blank"><img src="images/twitter.png" alt="Follow us on Twitter"></a>
+        <a href="https://www.instagram.com/vinarii_mk/?next=%2Fstories%2Fhighlights%2F17997855301125077%2F" target="_blank"><img src="images/instagram.png" alt="Follow us on Instagram"></a>
+    </div>
+
+    <div id="tail">
+        <p class="tail"> &#169; 2023 @Винарии.мк</p>
+    </div>
+
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("ready");
+
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var accordionItems = document.querySelectorAll('.accordion-item');
+
+            accordionItems.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    this.classList.toggle('open');
+
+                    // Close other open items
+                    accordionItems.forEach(function(otherItem) {
+                        if (otherItem !== item && otherItem.classList.contains('open')) {
+                            otherItem.classList.remove('open');
+                        }
+                    });
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
