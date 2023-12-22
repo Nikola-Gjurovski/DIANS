@@ -89,9 +89,9 @@ h1 {
   display: inline-block;
   margin: 1em 1em 0 0;
 }
-.red1 ul li a{
+/* .red1 ul li a{
   text-decoration: none;
-}
+} */
 .red1 ul li p {
   color: black;
   font-size: 18px;

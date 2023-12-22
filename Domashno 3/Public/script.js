@@ -3,14 +3,18 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { sr } from "./search";
 import * as turf from "@turf/turf";
+import { car } from "./Car";
+import { walk } from "./Walk"
 let map;
+ // Average car speed in km/h
+const averageWalkingSpeedKmph = 5;
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position) {
     const divs = document.querySelectorAll(".coords");
-    console.log(divs);
+    // console.log(divs);
     const { latitude } = position.coords;
     const { longitude } = position.coords;
-    console.log(latitude, longitude);
+    // console.log(latitude, longitude);
     const coordinates = [latitude, longitude];
 
     map = L.map("map").setView(coordinates, 10); // Set the initial map view
@@ -68,7 +72,7 @@ if (navigator.geolocation) {
     const div = document.querySelector(".coord");
     if (div) {
       const coords = div.getAttribute("data-card-id").split(" ");
-      console.log(coords);
+      // console.log(coords);
       L.marker([coords[0], coords[1]])
         .addTo(map)
         .bindPopup(
@@ -89,34 +93,7 @@ const distanceButton = document.getElementById("how_far");
 
 // Event listener for the button click
 distanceButton.addEventListener("click", () => {
-  // Get your current geolocation coordinates
-  // navigator.geolocation.getCurrentPosition(function (position) {
-  //   const { latitude, longitude } = position.coords;
-  //   const currentCoords = [latitude, longitude];
-
-  //   // Get the target location coordinates from a specific div attribute (for example, ".coord")
-  //   const targetDiv = document.querySelector(".coord");
-  //   if (targetDiv) {
-  //     const targetCoords = targetDiv.getAttribute("data-card-id").split(" ");
-
-  //     // Create a polyline between your current location and the target location
-  //     const polylineCoords = [currentCoords, [targetCoords[0], targetCoords[1]]];
-  //     const polyline = L.polyline(polylineCoords, { color: 'red' }).addTo(map);
-
-  //     // Calculate distance using turf.js
-  //     const from = turf.point(currentCoords);
-  //     const to = turf.point([targetCoords[0], targetCoords[1]]);
-  //     const options = { units: "kilometers" };
-  //     const distance = turf.distance(from, to, options);
-
-  //     // Display the distance on the map near the middle of the line
-  //     const middleCoords = [
-  //       (currentCoords[0] + parseFloat(targetCoords[0])) / 2,
-  //       (currentCoords[1] + parseFloat(targetCoords[1])) / 2,
-  //     ];
-  //     L.marker(middleCoords)
-  //       .addTo(map)
-  //       .bindPopup(`<p>Distance: ${distance.toFixed(2)} kilometers</p>`);
+ 
   navigator.geolocation.getCurrentPosition(function (position) {
     const { latitude, longitude } = position.coords;
     const currentCoords = [latitude, longitude];
@@ -138,6 +115,12 @@ distanceButton.addEventListener("click", () => {
       const to = turf.point([targetCoords[0], targetCoords[1]]);
       const options = { units: "kilometers" };
       const distance = turf.distance(from, to, options);
+      
+
+      
+
+// Calculate time for travel on foot
+      const timeOnFoot = distance / averageWalkingSpeedKmph;
 
       // Display the distance on the map near the middle of the line
       const middleCoords = [
@@ -150,6 +133,8 @@ distanceButton.addEventListener("click", () => {
       document.getElementById("distance").innerHTML = `${distance.toFixed(
         2
       )} km`;
+      car(distance)
+      walk(distance)
 
       // Add markers for the current and target locations
       const stri = "Вашата локација";
