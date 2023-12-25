@@ -20,6 +20,7 @@ body{
     display: flex;
     flex-direction: row;
     height: 60px;
+    justify-content: space-between;
 }
 
 #cover{
@@ -39,8 +40,8 @@ body{
     float: right;
     top: -10px;
     /* left: 870px; */
-    left:591px;
-    right: 0;
+    /*left:591px;*/
+    /*right: 0;*/
     height: 70px;
     background: #fcf9cc;
 }
@@ -327,6 +328,13 @@ a h3{
     flex: 5;
 }
 
+/* Smaller computer screen */
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+    #myVideo{
+        object-fit: cover;
+        width: 53%;
+    }
+}
 
 /*PHONE*/
 
@@ -379,10 +387,6 @@ a h3{
     #navigation a:hover{
         width: max-content;
         height: max-content;
-    }
-
-    #current{
-        height: 30px;
     }
 
     #logoJS img{
