@@ -1,0 +1,417 @@
+body, h1, h2, h3, p, img, ul, ol, li, figure, figcaption, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html{
+    background: #490304;
+    max-width: 100%;
+    height: 100%;
+    font-family: "Manrope", sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+#logo{
+    background: #fcf9cc;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    justify-content: space-between;
+}
+
+#cover{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#logoJS img{
+    height: 60px;
+}
+
+#navigation{
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    float: right;
+    top: -10px;
+    /* left: 870px; */
+    /*left:591px;*/
+    /*right: 0;*/
+    height: 70px;
+    background: #fcf9cc;
+}
+
+#navigation a{
+    color: #490304;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: 3px;
+    background: #fcf9cc;
+    height: max-content;
+    width: max-content;
+}
+
+#navigation a:hover{
+    cursor: pointer;
+    background: #490304;
+    color: #fcf9cc;
+    width: max-content;
+    height: max-content;
+}
+
+#current{
+    background: #490304;
+    color: #fcf9cc;
+    height: max-content;
+}
+
+a h3{
+    font-weight: bold;
+    padding: 24px;
+}
+
+.tail {
+    text-align: center;
+    font-size: 14pt;
+    margin: 0;
+}
+#tail{
+    color: #490304;
+    background: #fcf9cc;
+    padding: 10px;
+    margin: 15px 0 0;
+    font-weight: bold;
+}
+
+/* Carousel */
+
+.images {display: none}
+
+/* Slideshow container */
+.carousel-container {
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.previous, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "previous button" to the left */
+.previous {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit seethrough */
+.previous:hover, .next:hover {
+    background-color: rgba(101, 93, 93, 0.6);
+}
+
+
+/* The dots/bullets/indicators */
+.navigation-dot {
+    cursor: pointer;
+    height: 9px;
+    width: 9px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .navigation-dot:hover {
+    background-color: #717171;
+}
+
+.carousel-container .images img{
+    max-width: 300px;
+    height: auto;
+    width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+.carousel-container{
+    background: white;
+    margin: 0;
+    width: 100%;
+}
+
+#fix-photo{
+    height: 280px;
+    padding-top: 35px;;
+}
+
+
+/* Socials */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fcf9cc;
+}
+.social-links a img{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    color: #fcf9cc;
+}
+
+
+/*  About us  */
+
+#aboutUs{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    margin-bottom: 20px;
+}
+
+#aboutUs.vertical-layout {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+#aboutUs.vertical-layout div {
+    width: 100%;
+}
+
+#aboutUsSlika{
+    object-fit: cover;
+    max-width: 800px;
+    height: 563px;
+    margin-right: 10px;
+}
+
+#left_Side{
+    margin: auto 5px;
+    width: 50%;
+    border: 3px solid #490304;
+    padding: 10px;
+    color: #fcf9cc;
+    font-size: 12pt;
+    text-align: center;
+}
+
+#left_Side h2{
+    padding-bottom: 12px;
+}
+
+#intro{
+    text-align: justify ;
+    padding-bottom: 17px;
+}
+
+#ready{
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fcf9cc;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #490304;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    margin: 0;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    vertical-align: baseline;
+    width: 200px;
+}
+
+#ready:hover{
+    background-color: #e0dca1;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+
+/*Accordion gallery*/
+.main_box {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.img {
+    flex: 1;
+    height: 100%;
+    cursor: pointer;
+    margin: 0 0.125em;
+    transition: all .3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.img1 {
+    background-image: url(vinarii_sliki/Semejna_Vinarija_Kartal/svkart2.jpg);
+}
+
+.img2 {
+    background-image: url(vinarii_sliki/Semejna_Vinarija_Zaharchev/svz3.jpg);
+}
+
+.img3 {
+    background-image: url(vinarii_sliki/Vinarija_Grkov/gv1.jpg);
+}
+
+.img4 {
+    background-image: url(vinarii_sliki/Vinarija_Kamnik/vkam2.jpg);
+}
+.img5 {
+    background-image: url(vinarii_sliki/Vinarija_Milev/vm1.jpg);
+}
+.img6 {
+    background-image: url(vinarii_sliki/Vinarija_Monastery/mv1.jpeg);
+}
+.img7 {
+    background-image: url(vinarii_sliki/Vinarija_Popova_Kula/vpk2.jpg);
+}
+.img8 {
+    background-image: url(vinarii_sliki/Vinarija_Sopot/vs1.jpeg);
+}
+.img9 {
+    background-image: url(vinarii_sliki/Vinarija_Stobi/vst2.jpeg);
+}
+.img10 {
+    background-image: url(vinarii_sliki/Vinarija_Tikves/vt1.jpg);
+}
+.img11 {
+    background-image: url(vinarii_sliki/Vinarija_Bovin/vb1.jpg);
+}
+.img12 {
+    background-image: url(vinarii_sliki/Vinarija_Domaine_Lepovo/vdl2.jpg);
+}
+
+.img:hover {
+    flex: 5;
+}
+
+/* Smaller computer screen */
+@media screen and (min-width: 1200px) and (max-width: 1300px) {
+    #myVideo{
+        object-fit: cover;
+        width: 53%;
+    }
+}
+
+/*PHONE*/
+
+/* Default styles for larger screens */
+#aboutUs {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1200px) {
+    /* Home i about */
+    #cover{
+        height: 300px;
+        object-fit: cover;
+        object-position: 5% 30%;
+    }
+
+    body{
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    video{
+        width: 100%;
+        padding: 0;
+        height: 400px;
+        object-fit: cover;
+        margin: 0 10px 20px;
+    }
+
+    #logo{
+        flex-direction: column;
+        width: 100%;
+        height: 148px;
+    }
+
+    #navigation{
+        left: 0;
+        top: 5px;
+        height: 70px;
+    }
+
+    #navigation a:hover{
+        width: max-content;
+        height: max-content;
+    }
+
+    #logoJS img{
+        padding-left: 60px;
+    }
+
+    #aboutUs {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 10px;
+    }
+
+    .col-3 {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #left_Side {
+        margin-left: 15px;
+        width: 92%;
+    }
+
+    /* Carousel */
+    .carousel-container{
+        background: white;
+    }
+}

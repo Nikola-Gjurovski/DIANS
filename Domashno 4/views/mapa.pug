@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Title
+    link(rel="stylesheet", href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css")
+    link(rel="shortcut icon", type="image/png", href="icon.png")
+    link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap", rel="/stylesheet")
+    link(rel="stylesheet", href="/style2.css")
+    
+ 
+   
+  body
+    
+    #main
+      div(id="left_corcner")
+        #header
+          div
+            a(href='/')            
+             img(src="images/logo.jpg", width="300")
+        form#search-bar
+          input#src(type="search")
+          div
+            p 🔍    
+         
+        #block
+         each event in events
+          form.coords(id="najava_blok", data-card-id=`${event.startLocation.coordinates[0]} ${event.startLocation.coordinates[1]} ${event.slug}`)
+            .red1
+              ul
+                li
+                  a(href=`/winery/${event.slug}`) 
+                    p=event.name
+                
+                
+            #red2(data-card-id="42.0000999 21.4209535")
+              ul
+                li
+                  p=event.startLocation.description
+                
+       
+      #map
+    //- script(defer, src="/scriptM.js",type='module')
+    script( src="/bundle.js")
+    //- script(src="/search.js")
+
+    #tail
+      p.tail  © 2023 @Винарии.мк

@@ -1,0 +1,27 @@
+doctype html
+html(lang="mk")
+    head
+        meta(charset="UTF-8")
+        title Почетна
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/style.css")
+    body
+        #logo
+            a#logoJS(href="/")
+                img(src="/images/logo.jpg", alt="logo")
+            #navigation
+                a(href="/")
+                    h3#current Почетна
+                a(href="/aboutUs")
+                    h3 За&nbsp;нас
+                a(href="/mapa")
+                    h3 Мапа
+        //- #error
+        //-   h1=title
+        //-   p=msg
+        #tail
+          h1.tail=title
+          p.tail=msg
+            //- p.tail
+               h1=title
+               p=msg

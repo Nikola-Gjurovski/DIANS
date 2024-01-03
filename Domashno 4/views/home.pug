@@ -1,0 +1,145 @@
+doctype html
+html(lang="mk")
+    head
+        meta(charset="UTF-8")
+        title Почетна
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="style.css")
+    body
+        #logo
+            a#logoJS(href="/")
+                img(src="/images/logo.jpg", alt="logo")
+            #navigation
+                a(href="/")
+                    h3#current Почетна
+                a(href="/aboutUs")
+                    h3 За&nbsp;нас
+                a(href="/mapa")
+                    h3 Мапа
+        img#cover(src="/images/cover.jpg", alt="Wine and grapes")
+        .carousel-container
+            .images.fade
+                img(src="/images/bovin.png")
+            .images.fade
+                img(src="/images/imako.png")
+            .images.fade
+                img(src="/images/kamnik.png")
+            .images.fade
+                img(src="/images/lazar.jpg")
+            .images.fade
+                img(src="/images/popov1.png")
+            .images.fade
+                img(src="/images/popova%20kula.jpg")
+            #fix-photo.images.fade
+                img(src="/images/skovin.png")
+            .images.fade
+                img(src="/images/stobi.png")
+            .images.fade
+                img(src="/images/tikvesh.jpg")
+            .images.fade
+                img(src="/images/venec.png")
+            // Previous and Next Buttons
+            a.previous(onclick="plusSlides(-1)") ❮
+            a.next(onclick="plusSlides(1)") ❯
+        br
+        // Navigation Dots
+        div(style="text-align:center")
+            span.navigation-dot(onclick="currentSlide(1)")
+            span.navigation-dot(onclick="currentSlide(2)")
+            span.navigation-dot(onclick="currentSlide(3)")
+            span.navigation-dot(onclick="currentSlide(4)")
+            span.navigation-dot(onclick="currentSlide(5)")
+            span.navigation-dot(onclick="currentSlide(6)")
+            span.navigation-dot(onclick="currentSlide(7)")
+            span.navigation-dot(onclick="currentSlide(8)")
+            span.navigation-dot(onclick="currentSlide(9)")
+            span.navigation-dot(onclick="currentSlide(10)")
+        script.
+            window.onload = function() {
+                // Set the interval for automatic slideshow
+                var slideIndex = 0;
+                var intervalId = setInterval(transition, 2000);
+                function transition() {
+                    // Increment the slide index and show the next slide
+                    slideIndex++;
+                    showSlides(slideIndex);
+                }
+
+                // Function to show a specific slide
+                function showSlides(n) {
+                    var slides = document.getElementsByClassName("images");
+                    var dots = document.getElementsByClassName("navigation-dot");
+
+                    // Wrap around to the first slide if at the end
+                    if (n > slides.length) {
+                        slideIndex = 1;
+                    }
+
+                    // Show the corresponding slide and update navigation dots
+                    for (var i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        dots[i].classList.remove("active");
+                    }
+
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].classList.add("active");
+                }
+
+                // Function to stop the automatic slideshow on mouseover
+                function pauseSlideshow() {
+                    clearInterval(intervalId);
+                }
+
+                // Function to resume the automatic slideshow on mouseout
+                function resumeSlideshow() {
+                    intervalId = setInterval(transition, 1500);
+                }
+
+                // Event listeners for pause and resume on mouseover and mouseout
+                document.querySelector(".carousel-container").addEventListener("mouseover", pauseSlideshow);
+                document.querySelector(".carousel-container").addEventListener("mouseout", resumeSlideshow);
+            };
+
+            //
+
+            var currentIndex = 1;
+
+            //Show current image
+            showSlides(currentIndex);
+
+            //Function to move Next
+            function plusSlides(n) {
+                showSlides(currentIndex += n);
+            }
+
+            //Function to move back
+            function currentSlide(n) {
+                showSlides(currentIndex = n);
+            }
+
+
+            //Initiate moving of slides
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("images");
+                var dots = document.getElementsByClassName("navigation-dot");
+                if (n > slides.length) {currentIndex = 1}
+                if (n < 1) {currentIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[currentIndex-1].style.display = "block";
+                dots[currentIndex-1].className += " active";
+            }
+        .social-links
+            a(href="https://www.facebook.com/profile.php?id=61554727830080", target="_blank")
+                img(src="/images/facebook.png", alt="Follow us on Facebook")
+            a(href="https://twitter.com/vinarii4004", target="_blank")
+                img(src="/images/twitter.png", alt="Follow us on Twitter")
+            a(href="https://www.instagram.com/vinarii_mk/?next=%2Fstories%2Fhighlights%2F17997855301125077%2F", target="_blank")
+                img(src="/images/instagram.png", alt="Follow us on Instagram")
+        #tail
+            p.tail  2023 @Винарии.мк

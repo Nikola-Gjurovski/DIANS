@@ -1,0 +1,77 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Информации за винарија
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/WineryInfostyle.css")
+    script(src="/rating.js", defer)
+    link(rel="stylesheet", href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css")
+    link(rel="shortcut icon", type="image/png", href="/icon.png")
+    link(href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap", rel="stylesheet")
+   
+
+  script(defer, src="https://cdn.commento.io/js/commento.js")
+  body
+    #logo
+      a#logoJS(href="/")
+        img(src="/images/logo.jpg", alt="logo")
+      #navigation
+        a(href="/")
+          h3 Почетна
+        a(href="/aboutUs")
+          h3 За нас
+        a(href="/mapa")
+          h3 Мапа
+       
+    #wrapper
+      div(id="winery_info")
+        h2= `${event.name}`
+        
+        br
+        h4 Категорија:&nbsp;
+        if event.craft
+          p= `${event.craft}` 
+        br
+        h4 Локација:&nbsp;
+        p= event.startLocation.description
+        br
+       
+        
+        h4 Работно време:&nbsp;
+        if event.opening_hours
+         p= event.opening_hours
+
+        br
+        h4 Телефон:&nbsp;
+        if event.phone 
+         p= event.phone
+        br
+        h4 Веб страна: &nbsp;
+        if event.website
+         p= event.website
+        br
+        h4 Каталог на вина:&nbsp;
+        if event.types 
+          ul
+            each type in event.types
+              li=type  
+        h4 Остави оцена за винаријата:
+        br
+        .rw-ui-container
+        br
+        br
+        br
+        div.far
+         button#how_far Колку сум далеку?
+        div.far
+         p#distance
+         p#car
+         p#walk   
+        #commento
+    #map
+    .coord(id="najava_blok", data-card-id=`${event.startLocation.coordinates[0]} ${event.startLocation.coordinates[1]} ${event.slug}` )
+    #tail
+      p.tail  © 2023 @Винарии.мк 
+//- script(defer,src="/scriptM.js",type='module')
+script(src="/bundle.js")  

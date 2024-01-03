@@ -1,0 +1,97 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        title За нас
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="style.css")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    body
+        #logo
+            a#logoJS(href="/")
+                img(src="/images/logo.jpg", alt="logo")
+            #navigation
+                a(href="/")
+                    h3 Почетна
+                a(href="/aboutUs")
+                    h3#current За&nbsp;нас
+                a(href="/mapa")
+                    h3 Мапа
+        #aboutUs
+            .col-6.col-s-9(id="left_Side")
+                h2 Која е целта на Винарии.мк?
+                br
+                p#intro
+                    | Добредојдовте во светот на виното, каде што секоја гранка
+                    | раскажува своја приказна и секоја голтка претставува неодолива емоција.
+                    br
+                    br
+                    | Ние, како тимот кој стои зад оваа платформа, сакаме да ви овозможиме
+                    | несекојдневно патување низ бескрајните редови лозја и винарии во нашата земја.
+                    br
+                    br
+                    | Секоја винарија има своја приказна и историја. Секое вино што ќе го пробате
+                    | е олицетворение на македонската традиција и страст за уметноста на производство на вино.
+                    br
+                    br
+                    | Ние ќе бидеме вашиот водич низ царството на македонските винарии
+                    | со цел да ви овозможиме да ја откриете винската извонредност на Македонија.
+                    br
+                    br
+                    | Дали сте подготвени да ја започнете вашата следна незаборавна авантура?
+                input#ready(type="button", value="Да!", onclick="window.location.href='/mapa';")
+            video#myVideo(max-width="50px", height="500px", margin-right="20px", autoplay, muted, loop)
+                source(src="/Media2.mp4", type="video/mp4")
+                | Your browser does not support the video tag.
+        div(class="main_box")
+            .img.img1
+            .img.img2
+            .img.img3
+            .img.img4
+            .img.img5
+            .img.img6
+            .img.img7
+            .img.img8
+            .img.img9
+            .img.img10
+            .img.img11
+            .img.img12
+        .social-links
+            a(href="https://www.facebook.com/profile.php?id=61554727830080", target="_blank")
+                img(src="/images/facebook.png", alt="Follow us on Facebook")
+            a(href="https://twitter.com/vinarii4004", target="_blank")
+                img(src="/images/twitter.png", alt="Follow us on Twitter")
+            a(href="https://www.instagram.com/vinarii_mk/?next=%2Fstories%2Fhighlights%2F17997855301125077%2F", target="_blank")
+                img(src="/images/instagram.png", alt="Follow us on Instagram")
+        #tail
+            p.tail  2023 @Винарии.мк
+        script.
+            var video = document.getElementById("myVideo");
+            var btn = document.getElementById("ready");
+
+            function myFunction() {
+                if (video.paused) {
+                    video.play();
+                    btn.innerHTML = "Pause";
+                } else {
+                    video.pause();
+                    btn.innerHTML = "Play";
+                }
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                var accordionItems = document.querySelectorAll('.accordion-item');
+
+                accordionItems.forEach(function(item) {
+                    item.addEventListener('click', function() {
+                        this.classList.toggle('open');
+
+                        // Close other open items
+                        accordionItems.forEach(function(otherItem) {
+                            if (otherItem !== item && otherItem.classList.contains('open')) {
+                                otherItem.classList.remove('open');
+                            }
+                        });
+                    });
+                });
+            });

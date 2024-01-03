@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="mk">
+    <head>
+        <meta charset="UTF-8">
+        <title>Почетна</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="logo">
+            <a id="logoJS" href="Home page.html"><img src="images/logo.jpg" alt="logo"></a>
+            <div id="navigation">
+                <a href="Home page.html"><h3 id="current">Почетна</h3></a>
+                <a href="About.html"><h3>За&nbsp;нас</h3></a>
+                <a href="Mapa.html"><h3>Мапа</h3></a>
+            </div>
+        </div>
+
+        <img id="cover" src="images/cover.jpg" alt="Wine and grapes">
+
+        <div class="carousel-container">
+            <div class="images fade">
+                <img src="images/bovin.png">
+            </div>
+            <div class="images fade">
+                <img src="images/imako.png">
+            </div>
+            <div class="images fade">
+                <img src="images/kamnik.png">
+            </div>
+            <div class="images fade">
+                <img src="images/lazar.jpg">
+            </div>
+            <div class="images fade">
+                <img src="images/popov1.png">
+            </div>
+            <div class="images fade">
+                <img src="images/popova%20kula.jpg">
+            </div>
+            <div class="images fade" id="fix-photo">
+                <img src="images/skovin.png">
+            </div>
+            <div class="images fade">
+                <img src="images/stobi.png">
+            </div>
+            <div class="images fade">
+                <img src="images/tikvesh.jpg">
+            </div>
+            <div class="images fade">
+                <img src="images/venec.png">
+            </div>
+
+            <!-- Previous and Next Buttons -->
+            <a class="previous" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+
+        <!-- Navigation Dots-->
+        <div style="text-align:center">
+            <span class="navigation-dot" onclick="currentSlide(1)"></span>
+            <span class="navigation-dot" onclick="currentSlide(2)"></span>
+            <span class="navigation-dot" onclick="currentSlide(3)"></span>
+            <span class="navigation-dot" onclick="currentSlide(4)"></span>
+            <span class="navigation-dot" onclick="currentSlide(5)"></span>
+            <span class="navigation-dot" onclick="currentSlide(6)"></span>
+            <span class="navigation-dot" onclick="currentSlide(7)"></span>
+            <span class="navigation-dot" onclick="currentSlide(8)"></span>
+            <span class="navigation-dot" onclick="currentSlide(9)"></span>
+            <span class="navigation-dot" onclick="currentSlide(10)"></span>
+        </div>
+
+        <script>
+
+            window.onload = function() {
+                // Set the interval for automatic slideshow
+                var slideIndex = 0;
+                var intervalId = setInterval(transition, 2000);
+                function transition() {
+                    // Increment the slide index and show the next slide
+                    slideIndex++;
+                    showSlides(slideIndex);
+                }
+
+                // Function to show a specific slide
+                function showSlides(n) {
+                    var slides = document.getElementsByClassName("images");
+                    var dots = document.getElementsByClassName("navigation-dot");
+
+                    // Wrap around to the first slide if at the end
+                    if (n > slides.length) {
+                        slideIndex = 1;
+                    }
+
+                    // Show the corresponding slide and update navigation dots
+                    for (var i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                        dots[i].classList.remove("active");
+                    }
+
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].classList.add("active");
+                }
+
+                // Function to stop the automatic slideshow on mouseover
+                function pauseSlideshow() {
+                    clearInterval(intervalId);
+                }
+
+                // Function to resume the automatic slideshow on mouseout
+                function resumeSlideshow() {
+                    intervalId = setInterval(transition, 1500);
+                }
+
+                // Event listeners for pause and resume on mouseover and mouseout
+                document.querySelector(".carousel-container").addEventListener("mouseover", pauseSlideshow);
+                document.querySelector(".carousel-container").addEventListener("mouseout", resumeSlideshow);
+            };
+
+                //
+
+            var currentIndex = 1;
+
+            //Show current image
+            showSlides(currentIndex);
+
+            //Function to move Next
+            function plusSlides(n) {
+                showSlides(currentIndex += n);
+            }
+
+            //Function to move back
+            function currentSlide(n) {
+                showSlides(currentIndex = n);
+            }
+
+
+            //Initiate moving of slides
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("images");
+                var dots = document.getElementsByClassName("navigation-dot");
+                if (n > slides.length) {currentIndex = 1}
+                if (n < 1) {currentIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[currentIndex-1].style.display = "block";
+                dots[currentIndex-1].className += " active";
+            }
+        </script>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61554727830080" target="_blank"><img src="images/facebook.png" alt="Follow us on Facebook"></a>
+            <a href="https://twitter.com/vinarii4004" target="_blank"><img src="images/twitter.png" alt="Follow us on Twitter"></a>
+            <a href="https://www.instagram.com/vinarii_mk/?next=%2Fstories%2Fhighlights%2F17997855301125077%2F" target="_blank"><img src="images/instagram.png" alt="Follow us on Instagram"></a>
+        </div>
+
+        <div id="tail">
+            <p class="tail"> &#169; 2023 @Винарии.мк</p>
+        </div>
+
+
+    </body>
+</html>
