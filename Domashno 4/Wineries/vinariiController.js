@@ -19,7 +19,7 @@ exports.getAllWineries=catchAsync(async(req,res,next)=>{
     })
 })
 exports.getWinery=catchAsync(async (req,res,next)=>{
-    const event=await Event.findById(req.params.id).populate('reviews');
+    const event=await Event.findById(req.params.id);
     if(!event){
         return next(new AppError('No winery found with that id',404));
     }
@@ -61,7 +61,7 @@ exports.UpdateWinery=catchAsync(async(req,res,next)=>{
      if(!event){
          return next(new AppError('No winery found with that id',404))
      }
-     res.statsu(204).json({
+     res.status(204).json({
          status:'success',
          data:null
      })
