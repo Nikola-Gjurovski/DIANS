@@ -14696,28 +14696,27 @@ module.exports = reloadCSS;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.sr = void 0;
-// let divs=document.querySelectorAll('.coords');
-// let search=document.getElementById('src')
-// document.getElementById('search-bar').addEventListener('submit',e=>{
-// e.preventDefault();   
-// let text=search.value.toLowerCase()
-// console.log(text)
-// divs.forEach((items)=>{
-// const slug = items.getAttribute("data-card-id").split(" ")[2];
-// console.log(slug)
-// if(slug.includes(text)){
-//     items.style.opacity=1 
-//     items.style.display='block'
-// }
-// else{
-//     items.style.opacity=0
-//     items.style.display='none'
-//     console.log(search.value)
-// }
-// })
-
-// })
+exports.sr = exports.fullSearch = void 0;
+var fullSearch = exports.fullSearch = function fullSearch(map, divs) {
+  document.getElementById("search-bar").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var text = document.getElementById("src").value.toLowerCase();
+    map.eachLayer(function (layer) {
+      if (layer instanceof L.Marker) {
+        map.removeLayer(layer);
+      }
+    });
+    divs.forEach(function (marker) {
+      var coords = marker.getAttribute("data-card-id").split(" ")[2];
+      sr(coords, text, marker);
+      if (marker.style.display !== "none") {
+        // console.log('klik')
+        var _coords = marker.getAttribute("data-card-id").split(" ");
+        L.marker([_coords[0], _coords[1]]).addTo(map).bindPopup("<p>" + _coords[2] + "</p>");
+      }
+    });
+  });
+};
 var sr = exports.sr = function sr(slug, text, items) {
   if (slug.includes(text)) {
     items.style.opacity = 1;
@@ -36662,7 +36661,137 @@ var walk = exports.walk = function walk(distance) {
   // Calculate time for travel on foot
   if (hours !== 0) document.getElementById("walk").innerHTML = "\uD83D\uDEB6\u200D\u2642\uFE0F ".concat(hours, " \u0447\u0430\u0441\u0430 ").concat(minutes, " \u043C\u0438\u043D\u0443\u0442\u0438 ");else document.getElementById("walk").innerHTML = "\uD83D\uDEB6\u200D\u2642\uFE0F ".concat(minutes, " \u043C\u0438\u043D\u0443\u0442\u0438 ");
 };
-},{}],"script.js":[function(require,module,exports) {
+},{}],"MapWithAllWineries.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.smallMap = exports.showBigMap = exports.mapWinery = void 0;
+var showBigMap = exports.showBigMap = function showBigMap(L, position, map, cl) {
+  var divs = document.querySelectorAll("".concat(cl));
+  if (divs) {
+    // console.log(divs);
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    // console.log(latitude, longitude);
+    var coordinates = [latitude, longitude];
+    if (!map) {
+      map = L.map("map").setView(coordinates, 10);
+    } // Set the initial map view
+
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    divs.forEach(function (marker) {
+      if (marker.style.display !== "none") {
+        // console.log('klik')
+        var coords = marker.getAttribute("data-card-id").split(" ");
+        L.marker([coords[0], coords[1]]).addTo(map).bindPopup("<p>" + coords[2] + "</p>");
+      }
+    });
+    //   divs.forEach((marker) => {
+    //     const coords = marker.getAttribute("data-card-id").split(" ");
+    //     marker.addEventListener("click", () => {
+    //       map.setView([coords[0], coords[1]], 13, {
+    //         animate: true,
+    //         pan: {
+    //           duration: 2,
+    //         },
+    //       });
+    //     });
+    //   });
+    mapWinery(divs, map);
+  }
+};
+var mapWinery = exports.mapWinery = function mapWinery(divs, map) {
+  divs.forEach(function (marker) {
+    var coords = marker.getAttribute("data-card-id").split(" ");
+    marker.addEventListener("click", function () {
+      map.setView([coords[0], coords[1]], 13, {
+        animate: true,
+        pan: {
+          duration: 2
+        }
+      });
+    });
+  });
+};
+var smallMap = exports.smallMap = function smallMap(div, L, map) {
+  var coords = div.getAttribute("data-card-id").split(" ");
+  // console.log(coords);
+  L.marker([coords[0], coords[1]]).addTo(map).bindPopup(
+  // '<a href="' + div.url + '" target="_blank">' + coords[2] + "</a>"
+  "<h3>" + coords[2] + "</h3>");
+  map.setView([coords[0], coords[1]], 13, {
+    animate: true,
+    pan: {
+      duration: 1
+    }
+  });
+};
+},{}],"Distance.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fullDistance = void 0;
+var _Car = require("./Car");
+var _Walk = require("./Walk");
+var turf = _interopRequireWildcard(require("@turf/turf"));
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+var fullDistance = exports.fullDistance = function fullDistance(position, map) {
+  var _position$coords = position.coords,
+    latitude = _position$coords.latitude,
+    longitude = _position$coords.longitude;
+  var currentCoords = [latitude, longitude];
+
+  // Get the target location coordinates from a specific div attribute (for example, ".coord")
+  var targetDiv = document.querySelector(".coord");
+  if (targetDiv) {
+    var targetCoords = targetDiv.getAttribute("data-card-id").split(" ");
+
+    // Create a polyline between your current location and the target location
+    var polylineCoords = [currentCoords, [targetCoords[0], targetCoords[1]]];
+    var polyline = L.polyline(polylineCoords, {
+      color: "red"
+    }).addTo(map);
+
+    // Calculate distance using turf.js
+    var from = turf.point(currentCoords);
+    var to = turf.point([targetCoords[0], targetCoords[1]]);
+    var options = {
+      units: "kilometers"
+    };
+    var distance = turf.distance(from, to, options);
+
+    // Calculate time for travel on foot
+
+    // Display the distance on the map near the middle of the line
+    var middleCoords = [(currentCoords[0] + parseFloat(targetCoords[0])) / 2, (currentCoords[1] + parseFloat(targetCoords[1])) / 2];
+    // L.marker(middleCoords)
+    //   .addTo(map)
+    //   .bindPopup(`<p>Distance: ${distance.toFixed(2)} kilometers</p>`);
+    document.getElementById("distance").innerHTML = "".concat(distance.toFixed(2), " km");
+    (0, _Car.car)(distance);
+    (0, _Walk.walk)(distance);
+
+    // Add markers for the current and target locations
+    var stri = "Вашата локација";
+    L.marker(currentCoords).addTo(map).bindPopup("<p>" + stri + "</p>");
+    L.marker([targetCoords[0], targetCoords[1]]).addTo(map).bindPopup("<p>" + targetCoords[2] + "</p>");
+    map.setView([targetCoords[0], targetCoords[1]], 7, {
+      animate: true,
+      pan: {
+        duration: 1
+      }
+    });
+  }
+};
+},{"./Car":"Car.js","./Walk":"Walk.js","@turf/turf":"../node_modules/@turf/turf/turf.min.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _leaflet = _interopRequireDefault(require("leaflet"));
@@ -36671,14 +36800,17 @@ var _search = require("./search");
 var turf = _interopRequireWildcard(require("@turf/turf"));
 var _Car = require("./Car");
 var _Walk = require("./Walk");
+var _MapWithAllWineries = require("./MapWithAllWineries");
+var _Distance = require("./Distance");
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var map;
-// Average car speed in km/h
-var averageWalkingSpeedKmph = 5;
+
+//Showing the big map with all wineries from mongoDB
 if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function (position) {
+    // showBigMap(L,position,map,'.coords')
     var divs = document.querySelectorAll(".coords");
     // console.log(divs);
     var latitude = position.coords.latitude;
@@ -36698,52 +36830,17 @@ if (navigator.geolocation) {
         _leaflet.default.marker([coords[0], coords[1]]).addTo(map).bindPopup("<p>" + coords[2] + "</p>");
       }
     });
-    divs.forEach(function (marker) {
-      var coords = marker.getAttribute("data-card-id").split(" ");
-      marker.addEventListener("click", function () {
-        map.setView([coords[0], coords[1]], 13, {
-          animate: true,
-          pan: {
-            duration: 2
-          }
-        });
-      });
-    });
+    (0, _MapWithAllWineries.mapWinery)(divs, map);
+
+    //Search for specific winery on the big map
     if (document.getElementById("search-bar")) {
-      document.getElementById("search-bar").addEventListener("submit", function (e) {
-        e.preventDefault();
-        var text = document.getElementById("src").value.toLowerCase();
-        map.eachLayer(function (layer) {
-          if (layer instanceof _leaflet.default.Marker) {
-            map.removeLayer(layer);
-          }
-        });
-        divs.forEach(function (marker) {
-          var coords = marker.getAttribute("data-card-id").split(" ")[2];
-          (0, _search.sr)(coords, text, marker);
-          if (marker.style.display !== "none") {
-            // console.log('klik')
-            var _coords = marker.getAttribute("data-card-id").split(" ");
-            _leaflet.default.marker([_coords[0], _coords[1]]).addTo(map).bindPopup("<p>" + _coords[2] + "</p>");
-          }
-        });
-      });
+      (0, _search.fullSearch)(map, divs);
     }
 
-    // var mapa = L.map("map").setView(coordinates, 6)
+    // Showing map for the specific winery
     var div = document.querySelector(".coord");
     if (div) {
-      var coords = div.getAttribute("data-card-id").split(" ");
-      // console.log(coords);
-      _leaflet.default.marker([coords[0], coords[1]]).addTo(map).bindPopup(
-      // '<a href="' + div.url + '" target="_blank">' + coords[2] + "</a>"
-      "<h3>" + coords[2] + "</h3>");
-      map.setView([coords[0], coords[1]], 13, {
-        animate: true,
-        pan: {
-          duration: 1
-        }
-      });
+      (0, _MapWithAllWineries.smallMap)(div, _leaflet.default, map);
     }
   });
 }
@@ -36752,56 +36849,10 @@ var distanceButton = document.getElementById("how_far");
 // Event listener for the button click
 distanceButton.addEventListener("click", function () {
   navigator.geolocation.getCurrentPosition(function (position) {
-    var _position$coords = position.coords,
-      latitude = _position$coords.latitude,
-      longitude = _position$coords.longitude;
-    var currentCoords = [latitude, longitude];
-
-    // Get the target location coordinates from a specific div attribute (for example, ".coord")
-    var targetDiv = document.querySelector(".coord");
-    if (targetDiv) {
-      var targetCoords = targetDiv.getAttribute("data-card-id").split(" ");
-
-      // Create a polyline between your current location and the target location
-      var polylineCoords = [currentCoords, [targetCoords[0], targetCoords[1]]];
-      var polyline = _leaflet.default.polyline(polylineCoords, {
-        color: "red"
-      }).addTo(map);
-
-      // Calculate distance using turf.js
-      var from = turf.point(currentCoords);
-      var to = turf.point([targetCoords[0], targetCoords[1]]);
-      var options = {
-        units: "kilometers"
-      };
-      var distance = turf.distance(from, to, options);
-
-      // Calculate time for travel on foot
-      var timeOnFoot = distance / averageWalkingSpeedKmph;
-
-      // Display the distance on the map near the middle of the line
-      var middleCoords = [(currentCoords[0] + parseFloat(targetCoords[0])) / 2, (currentCoords[1] + parseFloat(targetCoords[1])) / 2];
-      // L.marker(middleCoords)
-      //   .addTo(map)
-      //   .bindPopup(`<p>Distance: ${distance.toFixed(2)} kilometers</p>`);
-      document.getElementById("distance").innerHTML = "".concat(distance.toFixed(2), " km");
-      (0, _Car.car)(distance);
-      (0, _Walk.walk)(distance);
-
-      // Add markers for the current and target locations
-      var stri = "Вашата локација";
-      _leaflet.default.marker(currentCoords).addTo(map).bindPopup("<p>" + stri + "</p>");
-      _leaflet.default.marker([targetCoords[0], targetCoords[1]]).addTo(map).bindPopup("<p>" + targetCoords[2] + "</p>");
-      map.setView([targetCoords[0], targetCoords[1]], 7, {
-        animate: true,
-        pan: {
-          duration: 1
-        }
-      });
-    }
+    (0, _Distance.fullDistance)(position, map);
   });
 });
-},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","leaflet/dist/leaflet.css":"../node_modules/leaflet/dist/leaflet.css","./search":"search.js","@turf/turf":"../node_modules/@turf/turf/turf.min.js","./Car":"Car.js","./Walk":"Walk.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"leaflet":"../node_modules/leaflet/dist/leaflet-src.js","leaflet/dist/leaflet.css":"../node_modules/leaflet/dist/leaflet.css","./search":"search.js","@turf/turf":"../node_modules/@turf/turf/turf.min.js","./Car":"Car.js","./Walk":"Walk.js","./MapWithAllWineries":"MapWithAllWineries.js","./Distance":"Distance.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -36826,7 +36877,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51231" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51883" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

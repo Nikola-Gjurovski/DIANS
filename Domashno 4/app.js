@@ -7,6 +7,7 @@ const ErrorHandler=require('./Error/errorController');
 const compression=require('compression');
 const eventRoute=require('./Wineries/vinariiRoutes');
 const userRoute=require('./Users/userRoutes');
+const reviewRoute=require('./Reviews/reviewRoutes');
 //const hpp=require('hpp');
 const path = require("path");
 
@@ -23,6 +24,7 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use('/api/v1/wineries',eventRoute);
 app.use('/api/v1/users',userRoute);
+app.use('/api/v1/review',reviewRoute);
 app.use("/", viewRoute);
 
 

@@ -33,3 +33,13 @@ res.status(200).render('vinarija',{
     event
 })
 });
+exports.getLoginForm=catchAsync(async(req,res)=>{
+  res.status(200).render('login',{
+      title:'Log into your account'
+  })
+})
+exports.signUp=catchAsync(async(req,res,next)=>{
+  res.status(200).render('signup',{
+      title:'Create your account'
+  })
+})

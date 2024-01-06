@@ -41,6 +41,12 @@ const vinariiSchema=mongoose.Schema({
     toJSON:{virtuals:true},
     toObject:{virtuals:true} 
 });
+vinariiSchema.virtual('reviews',{
+    ref:'Review',
+    foreignField:'winery',
+    localField:'_id'
+    
+})
 vinariiSchema.pre('save',function(next){
     this.slug=slugify(this.name,{lower:true});
     next();
