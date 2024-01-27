@@ -7,7 +7,7 @@
 - Елена Марковска (216009)
 - Ангела Колиќ (211178)
 
-[Open the Web Page](https://vinarii-webapp.azurewebsites.net)
+[Линк до веб апликацијата](https://vinarii-webapp.azurewebsites.net)
 
 # Отворање на проектот
 
