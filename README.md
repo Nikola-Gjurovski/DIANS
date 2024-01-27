@@ -6,8 +6,8 @@
 - Антоанета Јорданова (211081)
 - Елена Марковска (216009)
 - Ангела Колиќ (211178)
-#[Open the Web Page](https://vinarii-webapp.azurewebsites.net)
 
+[Open the Web Page](https://vinarii-webapp.azurewebsites.net)
 
 # Отворање на проектот
 
