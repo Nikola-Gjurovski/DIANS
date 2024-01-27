@@ -34,9 +34,7 @@ export const fullDistance=(position,map)=>{
             (currentCoords[0] + parseFloat(targetCoords[0])) / 2,
             (currentCoords[1] + parseFloat(targetCoords[1])) / 2,
           ];
-          // L.marker(middleCoords)
-          //   .addTo(map)
-          //   .bindPopup(`<p>Distance: ${distance.toFixed(2)} kilometers</p>`);
+        
           document.getElementById("distance").innerHTML = `${distance.toFixed(
             2
           )} km`;
